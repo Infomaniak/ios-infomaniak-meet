@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37FF73582434850A003FC067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
+		37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
+		37FF735F2434850A003FC067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
+		37FF73612434850C003FC067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
+		37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73622434850C003FC067 /* LaunchScreen.storyboard */; };
+		37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF736B24348E13003FC067 /* ConferenceViewController.swift */; };
+		C26CD4614755690128FA9AD8 /* libPods-MeetInfomaniak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37FF73542434850A003FC067 /* MeetInfomaniak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetInfomaniak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FF73572434850A003FC067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37FF735B2434850A003FC067 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		37FF735E2434850A003FC067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37FF73602434850C003FC067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37FF73632434850C003FC067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37FF73652434850C003FC067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FF736B24348E13003FC067 /* ConferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
+		3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeetInfomaniak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F175F43121182F2981E0B8D /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
+		E4E4F115E59864A5B2D173EB /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37FF73512434850A003FC067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26CD4614755690128FA9AD8 /* libPods-MeetInfomaniak.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37FF734B2434850A003FC067 = {
+			isa = PBXGroup;
+			children = (
+				37FF73562434850A003FC067 /* MeetInfomaniak */,
+				37FF73552434850A003FC067 /* Products */,
+				DA37EEDD0FD9C2AA9DC0578C /* Pods */,
+				91A6C6A2EFC302B0E96182F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37FF73552434850A003FC067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73542434850A003FC067 /* MeetInfomaniak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73572434850A003FC067 /* AppDelegate.swift */,
+				37FF735B2434850A003FC067 /* JoinViewController.swift */,
+				37FF735D2434850A003FC067 /* Main.storyboard */,
+				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
+				37FF73602434850C003FC067 /* Assets.xcassets */,
+				37FF73622434850C003FC067 /* LaunchScreen.storyboard */,
+				37FF73652434850C003FC067 /* Info.plist */,
+			);
+			path = MeetInfomaniak;
+			sourceTree = "<group>";
+		};
+		91A6C6A2EFC302B0E96182F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA37EEDD0FD9C2AA9DC0578C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F175F43121182F2981E0B8D /* Pods-MeetInfomaniak.debug.xcconfig */,
+				E4E4F115E59864A5B2D173EB /* Pods-MeetInfomaniak.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37FF73532434850A003FC067 /* MeetInfomaniak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FF73682434850C003FC067 /* Build configuration list for PBXNativeTarget "MeetInfomaniak" */;
+			buildPhases = (
+				AC34FEAAD35D11759518A7E4 /* [CP] Check Pods Manifest.lock */,
+				37FF73502434850A003FC067 /* Sources */,
+				37FF73512434850A003FC067 /* Frameworks */,
+				37FF73522434850A003FC067 /* Resources */,
+				CC56867DB49F1831481CA1EB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetInfomaniak;
+			productName = MeetInfomaniak;
+			productReference = 37FF73542434850A003FC067 /* MeetInfomaniak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37FF734C2434850A003FC067 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Philippe Weidmann";
+				TargetAttributes = {
+					37FF73532434850A003FC067 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 37FF734F2434850A003FC067 /* Build configuration list for PBXProject "MeetInfomaniak" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37FF734B2434850A003FC067;
+			productRefGroup = 37FF73552434850A003FC067 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37FF73532434850A003FC067 /* MeetInfomaniak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37FF73522434850A003FC067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */,
+				37FF73612434850C003FC067 /* Assets.xcassets in Resources */,
+				37FF735F2434850A003FC067 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC34FEAAD35D11759518A7E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetInfomaniak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC56867DB49F1831481CA1EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37FF73502434850A003FC067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
+				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
+				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37FF735D2434850A003FC067 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FF735E2434850A003FC067 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37FF73622434850C003FC067 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FF73632434850C003FC067 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37FF73662434850C003FC067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37FF73672434850C003FC067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37FF73692434850C003FC067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F175F43121182F2981E0B8D /* Pods-MeetInfomaniak.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 864VDCS2QY;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MeetInfomaniak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.MeetInfomaniak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37FF736A2434850C003FC067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E4F115E59864A5B2D173EB /* Pods-MeetInfomaniak.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 864VDCS2QY;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MeetInfomaniak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.MeetInfomaniak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37FF734F2434850A003FC067 /* Build configuration list for PBXProject "MeetInfomaniak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FF73662434850C003FC067 /* Debug */,
+				37FF73672434850C003FC067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FF73682434850C003FC067 /* Build configuration list for PBXNativeTarget "MeetInfomaniak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FF73692434850C003FC067 /* Debug */,
+				37FF736A2434850C003FC067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37FF734C2434850A003FC067 /* Project object */;
+}
