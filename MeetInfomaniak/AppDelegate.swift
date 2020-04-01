@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
             builder.serverURL = URL(string: "https://meet.infomaniak.com")
         }
@@ -23,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if let url = userActivity.webpageURL {
+            if let hash = url.absoluteString.split(separator: "/").last {
+                let joinViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! JoinViewController
+                joinViewController.hashRoom = String(hash)
+                self.window?.rootViewController = joinViewController
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        return true
+    }
 
 }
 
