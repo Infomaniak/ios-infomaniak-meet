@@ -7,3 +7,4 @@
 */
 NSCameraUsageDescription = "Nous avons besoin d'accéder à votre caméra pour la vidéo conférence.";
 NSMicrophoneUsageDescription = "Nous avons besoin d'accéder à votre microphone pour le chat vocal.";
+NSCalendarsUsageDescription = "Nous avons besoin d'accéder à votre calendrier pour programmer des rendez-vous";

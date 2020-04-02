@@ -51,7 +51,7 @@ class JoinViewController: UIViewController {
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         if let url = URL(string: "https://meet.infomaniak.com/\(roomId!)") {
-            let activityVC = UIActivityViewController(activityItems: ["kMeet", "shareText".localized, url] as [Any], applicationActivities: nil)
+            let activityVC = UIActivityViewController(activityItems: ["shareText".localized, url] as [Any], applicationActivities: nil)
             self.present(activityVC, animated: true, completion: nil)
         }
     }
