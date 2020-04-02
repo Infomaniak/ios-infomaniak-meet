@@ -150,6 +150,7 @@
                                     <constraint firstItem="8xM-k9-4ho" firstAttribute="leading" secondItem="A6O-1T-Hrf" secondAttribute="leading" constant="16" id="Fhl-XV-XZz"/>
                                     <constraint firstAttribute="trailing" secondItem="hvu-f0-qMv" secondAttribute="trailing" constant="16" id="L5w-7u-Bt6"/>
                                     <constraint firstItem="o8l-8c-Tde" firstAttribute="top" secondItem="8xM-k9-4ho" secondAttribute="bottom" constant="16" id="WHz-vx-sgc"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="Yan-pb-S4j"/>
                                     <constraint firstAttribute="bottom" secondItem="o8l-8c-Tde" secondAttribute="bottom" constant="16" id="d3m-8e-QX9"/>
                                     <constraint firstItem="hvu-f0-qMv" firstAttribute="leading" secondItem="A6O-1T-Hrf" secondAttribute="leading" constant="16" id="h2G-fF-8BM"/>
                                     <constraint firstAttribute="trailing" secondItem="8xM-k9-4ho" secondAttribute="trailing" constant="16" id="j7U-2f-o9c"/>
@@ -160,16 +161,17 @@
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A6O-1T-Hrf" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" constant="32" id="9VR-ec-vjV"/>
+                            <constraint firstItem="A6O-1T-Hrf" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" priority="750" constant="32" id="9VR-ec-vjV"/>
                             <constraint firstItem="afY-cK-whf" firstAttribute="top" secondItem="anv-3o-oyt" secondAttribute="bottom" constant="40" id="E7a-Fp-eeh"/>
                             <constraint firstItem="GEK-An-e0b" firstAttribute="bottom" secondItem="A6O-1T-Hrf" secondAttribute="bottom" constant="32" id="Qjh-fV-kds"/>
                             <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="anv-3o-oyt" secondAttribute="trailing" priority="750" constant="32" id="TEZ-XJ-f2F"/>
                             <constraint firstItem="anv-3o-oyt" firstAttribute="top" secondItem="GEK-An-e0b" secondAttribute="top" constant="48" id="Ucl-eo-8ur"/>
                             <constraint firstItem="anv-3o-oyt" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="XcZ-Xi-A2p"/>
                             <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="afY-cK-whf" secondAttribute="trailing" constant="32" id="pWd-63-tF1"/>
+                            <constraint firstItem="A6O-1T-Hrf" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="qfR-kM-EVc"/>
                             <constraint firstItem="afY-cK-whf" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" constant="32" id="s4J-ie-NCs"/>
                             <constraint firstItem="anv-3o-oyt" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" priority="750" constant="32" id="wCo-fy-2wm"/>
-                            <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="A6O-1T-Hrf" secondAttribute="trailing" constant="32" id="zRY-ZA-mVt"/>
+                            <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="A6O-1T-Hrf" secondAttribute="trailing" priority="750" constant="32" id="zRY-ZA-mVt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GEK-An-e0b"/>
                     </view>
