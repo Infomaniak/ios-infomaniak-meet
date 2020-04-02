@@ -13,6 +13,9 @@
 		37FF73612434850C003FC067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
 		37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73622434850C003FC067 /* LaunchScreen.storyboard */; };
 		37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF736B24348E13003FC067 /* ConferenceViewController.swift */; };
+		37FF73712435CB92003FC067 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
+		37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
+		37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
 		C26CD4614755690128FA9AD8 /* libPods-MeetInfomaniak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,13 @@
 		37FF73652434850C003FC067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FF736B24348E13003FC067 /* ConferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetInfomaniak.entitlements; sourceTree = "<group>"; };
+		37FF73722435CB92003FC067 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37FF73742435CBFA003FC067 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37FF73752435CC0B003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37FF73762435CC18003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37FF73772435CC2F003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37FF73792435CCE3003FC067 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeetInfomaniak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F175F43121182F2981E0B8D /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E4F115E59864A5B2D173EB /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,16 +74,43 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
-				37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */,
-				37FF73572434850A003FC067 /* AppDelegate.swift */,
-				37FF735B2434850A003FC067 /* JoinViewController.swift */,
-				37FF735D2434850A003FC067 /* Main.storyboard */,
-				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
-				37FF73602434850C003FC067 /* Assets.xcassets */,
-				37FF73622434850C003FC067 /* LaunchScreen.storyboard */,
-				37FF73652434850C003FC067 /* Info.plist */,
+				37FF73782435CC8D003FC067 /* Extensions */,
+				37FF736E2435CB41003FC067 /* Resources */,
+				37FF737D2435D219003FC067 /* Controllers */,
 			);
 			path = MeetInfomaniak;
+			sourceTree = "<group>";
+		};
+		37FF736E2435CB41003FC067 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73652434850C003FC067 /* Info.plist */,
+				37FF73602434850C003FC067 /* Assets.xcassets */,
+				37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */,
+				37FF735D2434850A003FC067 /* Main.storyboard */,
+				37FF73622434850C003FC067 /* LaunchScreen.storyboard */,
+				37FF73732435CB92003FC067 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37FF73782435CC8D003FC067 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73792435CCE3003FC067 /* Localizable.swift */,
+				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37FF737D2435D219003FC067 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37FF73572434850A003FC067 /* AppDelegate.swift */,
+				37FF735B2434850A003FC067 /* JoinViewController.swift */,
+				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		91A6C6A2EFC302B0E96182F3 /* Frameworks */ = {
@@ -137,6 +174,10 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				de,
+				es,
+				it,
 			);
 			mainGroup = 37FF734B2434850A003FC067;
 			productRefGroup = 37FF73552434850A003FC067 /* Products */;
@@ -154,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */,
+				37FF73712435CB92003FC067 /* Localizable.strings in Resources */,
 				37FF73612434850C003FC067 /* Assets.xcassets in Resources */,
 				37FF735F2434850A003FC067 /* Main.storyboard in Resources */,
 			);
@@ -210,6 +252,8 @@
 			files = (
 				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
+				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
+				37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */,
 				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +277,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		37FF73732435CB92003FC067 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FF73722435CB92003FC067 /* en */,
+				37FF73742435CBFA003FC067 /* fr */,
+				37FF73752435CC0B003FC067 /* de */,
+				37FF73762435CC18003FC067 /* es */,
+				37FF73772435CC2F003FC067 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -240,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -300,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -356,11 +414,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/MeetInfomaniak.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MeetInfomaniak/Info.plist;
+				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,11 +437,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/MeetInfomaniak.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MeetInfomaniak/Info.plist;
+				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

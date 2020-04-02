@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let url = userActivity.webpageURL {
             if let hash = url.absoluteString.split(separator: "/").last {
                 let joinViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! JoinViewController
-                joinViewController.hashRoom = String(hash)
+                joinViewController.roomId = String(hash)
                 self.window?.rootViewController = joinViewController
                 self.window?.makeKeyAndVisible()
             }

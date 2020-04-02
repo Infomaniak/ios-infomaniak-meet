@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MeetInfomaniak
+
+  Created by Philippe Weidmann on 02.04.20.
+  Copyright © 2020 Philippe Weidmann. All rights reserved.
+*/
+"userNameHint" = "Choose a nickname";
+"createButton" = "Start the meeting";
+"shareButton" = "Invite users";
+"title" = "Create or join a meeting";
+"shareText" = "Click the following link to join the meeting:";

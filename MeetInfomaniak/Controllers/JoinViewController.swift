@@ -10,23 +10,28 @@ import UIKit
 
 class JoinViewController: UIViewController {
 
+    @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var fieldsView: UIView!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var roomNameTextField: UITextField!
-    var hashRoom = ""
+    @IBOutlet weak var usernameTextField: UITextField!
+
+    let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
+    var roomId: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.hideKeyboardWhenTappedAround()
-        
-        roomNameTextField.text = hashRoom
-        
+
         fieldsView.layer.cornerRadius = 10
         fieldsView.layer.shadowColor = UIColor.black.cgColor
         fieldsView.layer.shadowOpacity = 0.25
         fieldsView.layer.shadowOffset = .zero
         fieldsView.layer.shadowRadius = 10
+
+        self.setCreateButtonEnabled(false)
+
+        if roomId == nil {
+            roomId = String((0..<16).map { _ in hashCharList.randomElement()! })
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,28 +42,33 @@ class JoinViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return roomNameTextField.text != nil && roomNameTextField.text!.count > 0 && userNameTextField.text != nil && userNameTextField.text!.count > 0
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
-            conferenceViewController.displayName = userNameTextField.text!
-            conferenceViewController.roomName = roomNameTextField.text!
+            conferenceViewController.roomName = roomId
+            conferenceViewController.displayName = usernameTextField.text!
+        }
+    }
+    
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        if let url = URL(string: "https://meet.infomaniak.com/\(roomId!)") {
+            let activityVC = UIActivityViewController(activityItems: ["kMeet", "shareText".localized, url] as [Any], applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
         }
     }
 
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(JoinViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+    @IBAction func usenameChanged(_ sender: UITextField) {
+        self.setCreateButtonEnabled(sender.text!.count > 1)
     }
 
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+    func setCreateButtonEnabled(_ enabled: Bool) {
+        UIView.animate(withDuration: 0.5) {
+            self.createButton.isEnabled = enabled
+            self.createButton.backgroundColor = enabled ? UIColor(named: "mainTint") : UIColor.lightGray
+        }
     }
 
-    
+    // MARK: - Keyboard management
+
     @objc func keyboardWillChange(notification: Notification) {
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
