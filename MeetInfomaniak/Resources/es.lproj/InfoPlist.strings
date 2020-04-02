@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  MeetInfomaniak
+
+  Created by Philippe Weidmann on 02.04.20.
+  Copyright © 2020 Philippe Weidmann. All rights reserved.
+*/
+NSCameraUsageDescription = "Necesitamos acceso a su cámara para la videoconferencia.";
+NSMicrophoneUsageDescription = "Necesitamos acceso a su micrófono para el chat de voz.";

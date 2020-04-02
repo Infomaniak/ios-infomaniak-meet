@@ -16,6 +16,7 @@
 		37FF73712435CB92003FC067 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
 		37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
 		37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
+		37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
 		C26CD4614755690128FA9AD8 /* libPods-MeetInfomaniak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,11 @@
 		37FF73772435CC2F003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37FF73792435CCE3003FC067 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		37FF738A2435DB28003FC067 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37FF738C2435DB2A003FC067 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37FF738D2435DB2A003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37FF738E2435DB2B003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37FF738F2435DB2B003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3ED4E97375DF9E1D908C9E0D /* libPods-MeetInfomaniak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeetInfomaniak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F175F43121182F2981E0B8D /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E4F115E59864A5B2D173EB /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 				37FF735D2434850A003FC067 /* Main.storyboard */,
 				37FF73622434850C003FC067 /* LaunchScreen.storyboard */,
 				37FF73732435CB92003FC067 /* Localizable.strings */,
+				37FF738B2435DB28003FC067 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 				37FF73712435CB92003FC067 /* Localizable.strings in Resources */,
 				37FF73612434850C003FC067 /* Assets.xcassets in Resources */,
 				37FF735F2434850A003FC067 /* Main.storyboard in Resources */,
+				37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,18 @@
 				37FF73772435CC2F003FC067 /* it */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		37FF738B2435DB28003FC067 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FF738A2435DB28003FC067 /* en */,
+				37FF738C2435DB2A003FC067 /* fr */,
+				37FF738D2435DB2A003FC067 /* de */,
+				37FF738E2435DB2B003FC067 /* it */,
+				37FF738F2435DB2B003FC067 /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
