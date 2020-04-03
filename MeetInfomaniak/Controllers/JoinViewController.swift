@@ -10,9 +10,14 @@ import UIKit
 
 class JoinViewController: UIViewController {
 
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var fieldsView: UIView!
     @IBOutlet weak var usernameTextField: UITextField!
+
+    var fieldsViewFrame: CGRect!
 
     let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     var roomId: String!
@@ -34,6 +39,10 @@ class JoinViewController: UIViewController {
         }
     }
 
+    override func viewDidLayoutSubviews() {
+        fieldsViewFrame = fieldsView.frame
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
@@ -48,10 +57,11 @@ class JoinViewController: UIViewController {
             conferenceViewController.displayName = usernameTextField.text!
         }
     }
-    
+
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         if let url = URL(string: "https://meet.infomaniak.com/\(roomId!)") {
             let activityVC = UIActivityViewController(activityItems: ["shareText".localized, url] as [Any], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = shareButton
             self.present(activityVC, animated: true, completion: nil)
         }
     }
@@ -74,11 +84,22 @@ class JoinViewController: UIViewController {
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let deltaY = targetFrame.origin.y - curFrame.origin.y
+        var deltaY = targetFrame.origin.y - curFrame.origin.y
+
+        let fieldsViewFrameInsideView = self.fieldsView.superview!.convert(fieldsView.frame, to: nil)
+        if (fieldsViewFrameInsideView.origin.y + self.fieldsView.frame.height < targetFrame.origin.y) {
+            deltaY = 0
+        }
 
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
-            self.view.frame.origin.y += deltaY
-            self.view.setNeedsLayout()
+            if (curFrame.origin.y > targetFrame.origin.y) {
+                self.fieldsView.frame.origin.y += deltaY
+                self.backgroundView.alpha = 0.75
+            } else {
+                self.fieldsView.frame = self.fieldsViewFrame
+                self.backgroundView.alpha = 0
+            }
+            self.fieldsView.setNeedsLayout()
         }, completion: nil)
 
     }
