@@ -84,16 +84,18 @@ class JoinViewController: UIViewController {
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        var deltaY = targetFrame.origin.y - curFrame.origin.y
+        var deltaY: CGFloat = 0
 
         let fieldsViewFrameInsideView = self.fieldsView.superview!.convert(fieldsView.frame, to: nil)
         if (fieldsViewFrameInsideView.origin.y + self.fieldsView.frame.height < targetFrame.origin.y) {
-            deltaY = 0
+            deltaY = fieldsView.frame.origin.y
+        } else {
+            deltaY = (self.fieldsView.superview?.convert(CGPoint(x: fieldsViewFrameInsideView.origin.x, y: (targetFrame.origin.y - self.fieldsView.frame.height)), from: self.view).y ?? 0) - 24
         }
 
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
             if (curFrame.origin.y > targetFrame.origin.y) {
-                self.fieldsView.frame.origin.y += deltaY
+                self.fieldsView.frame.origin.y = deltaY
                 self.backgroundView.alpha = 0.75
             } else {
                 self.fieldsView.frame = self.fieldsViewFrame
