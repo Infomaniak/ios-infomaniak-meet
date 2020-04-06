@@ -38,11 +38,11 @@ class JoinViewController: UIViewController {
             roomId = String((0..<16).map { _ in hashCharList.randomElement()! })
         }
     }
-
-    override func viewDidLayoutSubviews() {
-        fieldsViewFrame = fieldsView.frame
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        fieldsViewFrame = nil
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
@@ -80,6 +80,10 @@ class JoinViewController: UIViewController {
     // MARK: - Keyboard management
 
     @objc func keyboardWillChange(notification: Notification) {
+        if (fieldsViewFrame == nil) {
+            fieldsViewFrame = fieldsView.frame
+        }
+        
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
