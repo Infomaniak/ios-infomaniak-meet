@@ -6,7 +6,8 @@
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
 "userNameHint" = "Wählen Sie ein Pseudonym";
-"createButton" = "Das Meeting starten";
+"createButton" = "Erstellen Sie das Meeting";
+"acceptButton" = "Einladung annehmen";
 "shareButton" = "Benutzer einladen";
 "title" = "Meeting erstellen oder teilnehmen";
 "shareText" = "Klicken Sie auf den folgenden Link, um dem Meeting beizutreten:\n";

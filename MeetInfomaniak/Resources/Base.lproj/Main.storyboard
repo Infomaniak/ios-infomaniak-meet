@@ -111,7 +111,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="createButton"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="zVa-VQ-HLm" kind="presentation" id="Rzx-tM-4ah"/>
+                                                    <segue destination="zVa-VQ-HLm" kind="presentation" identifier="ConferenceSegue" id="Rzx-tM-4ah"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choisir un pseudo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xM-k9-4ho">

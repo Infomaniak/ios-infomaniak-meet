@@ -6,7 +6,8 @@
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
 "userNameHint" = "Choose a nickname";
-"createButton" = "Start the meeting";
+"createButton" = "Create the meeting";
+"acceptButton" = "Accept Invitation";
 "shareButton" = "Invite users";
 "title" = "Create or join a meeting";
 "shareText" = "Click the following link to join the meeting:";

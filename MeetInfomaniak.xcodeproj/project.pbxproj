@@ -11,6 +11,7 @@
 		37650DBA243B6A15006C794B /* JitsiMeet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37650DBB243B6A15006C794B /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; };
 		37650DBC243B6A15006C794B /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		37FF73582434850A003FC067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
 		37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
 		37FF735F2434850A003FC067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		37A6DD30243B51E400DD8E79 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
 		37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JitsiMeet.framework; sourceTree = "<group>"; };
 		37FF73542434850A003FC067 /* kMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 		37FF73782435CC8D003FC067 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */,
 				37FF73792435CCE3003FC067 /* Localizable.swift */,
 				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
 			);
@@ -256,6 +259,7 @@
 			files = (
 				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
+				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
 				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
 				37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */,
 				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,

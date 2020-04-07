@@ -6,7 +6,8 @@
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
 "userNameHint" = "Choisir un pseudo";
-"createButton" = "Lancer la réunion";
+"createButton" = "Créer la réunion";
+"acceptButton" = "Accepter l'invitation";
 "shareButton" = "Inviter des utilisateurs";
 "title" = "Créez ou rejoignez une réunion";
 "shareText" = "Cliquez sur le lien suivant pour rejoindre une conférence :";

@@ -21,6 +21,8 @@ class JoinViewController: UIViewController {
 
     let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     var roomId: String!
+    var shouldAutoJoin = false
+    let username = UserDefaults.getUsername()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +39,27 @@ class JoinViewController: UIViewController {
         if roomId == nil {
             roomId = String((0..<16).map { _ in hashCharList.randomElement()! })
         }
+
+        if username != nil {
+            usernameTextField.text = username
+        }
+
+        self.setCreateButtonEnabled(usernameTextField.text!.count > 1)
     }
-    
+
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         fieldsViewFrame = nil
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        if shouldAutoJoin && usernameTextField.text!.count > 1 {
+            self.performSegue(withIdentifier: "ConferenceSegue", sender: nil)
+        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        createButton.setTitle(shouldAutoJoin ? "acceptButton".localized : "createButton".localized, for: .normal)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,6 +68,8 @@ class JoinViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
+            shouldAutoJoin = false
+            UserDefaults.store(username: usernameTextField.text!)
             conferenceViewController.roomName = roomId
             conferenceViewController.displayName = usernameTextField.text!
         }
@@ -83,7 +100,7 @@ class JoinViewController: UIViewController {
         if (fieldsViewFrame == nil) {
             fieldsViewFrame = fieldsView.frame
         }
-        
+
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
