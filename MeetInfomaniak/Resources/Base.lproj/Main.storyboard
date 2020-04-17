@@ -37,44 +37,23 @@
                                 <rect key="frame" x="32" y="98" width="350" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anv-3o-oyt">
-                                        <rect key="frame" x="44.666666666666686" y="0.0" width="261" height="100"/>
+                                        <rect key="frame" x="31" y="0.0" width="288" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-meet-ios" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-fY-TnJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-kmeet" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-OD-Eer">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="HFu-fY-TnJ" secondAttribute="height" multiplier="1:1" id="ST5-HC-i8f"/>
+                                                    <constraint firstAttribute="width" secondItem="FEv-OD-Eer" secondAttribute="height" multiplier="800:278" id="dF0-mh-27Z"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infomaniak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-oB-Iyr">
-                                                <rect key="frame" x="108" y="8" width="145" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="byc-J9-kPe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                                <color key="textColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-ua-VoC">
-                                                <rect key="frame" x="108" y="29" width="145" height="71"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="p6x-ua-VoC" firstAttribute="leading" secondItem="HFu-fY-TnJ" secondAttribute="trailing" constant="8" id="5i0-Tb-1AS"/>
-                                            <constraint firstAttribute="bottom" secondItem="p6x-ua-VoC" secondAttribute="bottom" id="AvH-Cd-KjA"/>
-                                            <constraint firstItem="RvS-oB-Iyr" firstAttribute="top" secondItem="anv-3o-oyt" secondAttribute="top" constant="8" id="Eb1-Dt-hMR"/>
-                                            <constraint firstItem="RvS-oB-Iyr" firstAttribute="leading" secondItem="HFu-fY-TnJ" secondAttribute="trailing" constant="8" id="I3V-Iq-2mo"/>
-                                            <constraint firstAttribute="trailing" secondItem="RvS-oB-Iyr" secondAttribute="trailing" constant="8" id="UQ1-6B-0aY"/>
                                             <constraint firstAttribute="height" constant="100" id="VTw-ss-lmx"/>
-                                            <constraint firstItem="HFu-fY-TnJ" firstAttribute="leading" secondItem="anv-3o-oyt" secondAttribute="leading" id="ePD-UP-Qts"/>
+                                            <constraint firstAttribute="bottom" secondItem="FEv-OD-Eer" secondAttribute="bottom" id="YSC-zT-Lfe"/>
+                                            <constraint firstItem="FEv-OD-Eer" firstAttribute="leading" secondItem="anv-3o-oyt" secondAttribute="leading" id="eYd-E3-kgb"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="fjs-Md-tpq"/>
-                                            <constraint firstItem="p6x-ua-VoC" firstAttribute="top" secondItem="RvS-oB-Iyr" secondAttribute="bottom" id="gn3-AW-RUf"/>
-                                            <constraint firstItem="HFu-fY-TnJ" firstAttribute="top" secondItem="anv-3o-oyt" secondAttribute="top" id="mWD-aW-cKI"/>
-                                            <constraint firstAttribute="trailing" secondItem="p6x-ua-VoC" secondAttribute="trailing" constant="8" id="sQS-Pn-bmN"/>
-                                            <constraint firstAttribute="bottom" secondItem="HFu-fY-TnJ" secondAttribute="bottom" id="x6W-yd-FuG"/>
+                                            <constraint firstItem="FEv-OD-Eer" firstAttribute="top" secondItem="anv-3o-oyt" secondAttribute="top" id="rRE-Ua-73r"/>
+                                            <constraint firstAttribute="trailing" secondItem="FEv-OD-Eer" secondAttribute="trailing" id="tdJ-7F-4Py"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Créer ou rejoignez une réunion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="afY-cK-whf">
@@ -229,7 +208,7 @@
     </scenes>
     <resources>
         <image name="ic_share" width="16" height="16"/>
-        <image name="logo-meet-ios" width="2048" height="2048"/>
+        <image name="logo-kmeet" width="800" height="278"/>
         <namedColor name="backgroundColor">
             <color red="0.94900000095367432" green="0.96100002527236938" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
