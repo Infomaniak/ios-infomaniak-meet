@@ -26,18 +26,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         return true
     }
-    
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        if let hash = URLComponents(url: url, resolvingAgainstBaseURL: true)?.url?.absoluteString.replacingOccurrences(of: "kmeet://", with: "") {
+            launchFromLink(hash: hash)
+        }
+        return true
+    }
+
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: ([UIUserActivityRestoring]?) -> Void) -> Bool {
         if let url = userActivity.webpageURL {
-            if let hash = url.absoluteString.split(separator: "/").last {
-                let joinViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! JoinViewController
-                joinViewController.shouldAutoJoin = true
-                joinViewController.roomId = String(hash)
-                self.window?.rootViewController = joinViewController
-                self.window?.makeKeyAndVisible()
+            if let hash = URLComponents(url: url, resolvingAgainstBaseURL: true)?.path.replacingOccurrences(of: "/", with: "") {
+                launchFromLink(hash: hash)
             }
         }
         return true
+    }
+
+    func launchFromLink(hash: String) {
+        let emptyHash = hash.count == 0
+        let joinViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! JoinViewController
+        joinViewController.shouldAutoJoin = !emptyHash
+        joinViewController.roomId = emptyHash ? nil : String(hash)
+        self.window?.rootViewController = joinViewController
+        self.window?.makeKeyAndVisible()
     }
 
 }

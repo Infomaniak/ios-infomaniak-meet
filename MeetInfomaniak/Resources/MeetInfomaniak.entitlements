@@ -5,6 +5,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:meet.infomaniak.com</string>
+		<string>applinks:meet.demonstration.ch</string>
 	</array>
 </dict>
 </plist>
