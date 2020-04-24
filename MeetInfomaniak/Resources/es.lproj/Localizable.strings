@@ -11,3 +11,9 @@
 "shareButton" = "Invitar a los usuarios";
 "title" = "Crear o unirse a una reunión";
 "shareText" = "Presione en el siguiente enlace para unirse a la reunión:\n";
+"mandatoryUsername" = "Pseudo obligatoire";
+"joinRoomTitle" = "Participar en una reunión existente";
+"joinRoomAlertDescription" = "Haga clic en un enlace para compartir o escriba el ID de la reunión aquí";
+"joinRoomButton" = "Únete a";
+"cancelButton" = "Cancelar";
+"roomNameHint" = "ID de la reunión";

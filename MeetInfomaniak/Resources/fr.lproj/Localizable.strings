@@ -11,3 +11,9 @@
 "shareButton" = "Inviter des utilisateurs";
 "title" = "Créez ou rejoignez une réunion";
 "shareText" = "Cliquez sur le lien suivant pour rejoindre une conférence :";
+"mandatoryUsername" = "Pseudo obligatoire";
+"joinRoomTitle" = "Rejoindre une réunion existante";
+"joinRoomAlertDescription" = "Cliquez sur un lien de partage ou écrivez l'identifiant de la réunion ici";
+"joinRoomButton" = "Rejoindre";
+"cancelButton" = "Annuler";
+"roomNameHint" = "Identifiant de la réunion";

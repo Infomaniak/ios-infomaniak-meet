@@ -16,13 +16,17 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var fieldsView: UIView!
     @IBOutlet weak var usernameTextField: UITextField!
-
+    @IBOutlet weak var joinMeetingButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     var fieldsViewFrame: CGRect!
 
     let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     var roomId: String!
     var shouldAutoJoin = false
     let username = UserDefaults.getUsername()
+    var alertController: UIAlertController!
+    var joinAction: UIAlertAction!
+    var alertPresented = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +41,62 @@ class JoinViewController: UIViewController {
         self.setCreateButtonEnabled(false)
 
         if roomId == nil {
-            roomId = String((0..<16).map { _ in hashCharList.randomElement()! })
+            roomId = generateRoomId()
+        } else {
+            joinMeetingButton.isHidden = true
         }
 
         if username != nil {
             usernameTextField.text = username
         }
 
-        self.setCreateButtonEnabled(usernameTextField.text!.count > 1)
+        self.createAlertViewController()
+        self.setCreateButtonEnabled(true)
+    }
+    
+    func generateRoomId() -> String {
+        return String((0..<16).map { _ in hashCharList.randomElement()! })
+    }
+
+    func createAlertViewController() {
+        alertController = UIAlertController(title: "joinRoomTitle".localized, message: "joinRoomAlertDescription".localized, preferredStyle: UIAlertController.Style.alert)
+        alertController.view.tintColor = UIColor(named: "mainTint")
+
+        joinAction = UIAlertAction(title: "joinRoomButton".localized, style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let roomName = self.alertController.textFields![0] as UITextField
+            self.performSegue(withIdentifier: "ConferenceSegue", sender: roomName.text)
+            self.alertPresented = false
+        })
+        joinAction.isEnabled = false
+
+        alertController.addTextField { (textField: UITextField!) -> Void in
+            textField.placeholder = "roomNameHint".localized
+            textField.addTarget(self, action: #selector(self.roomNameChanged(_:)), for: .editingChanged)
+        }
+
+        let cancelAction = UIAlertAction(title: "cancelButton".localized, style: UIAlertAction.Style.cancel, handler: {
+            (action: UIAlertAction!) -> Void in
+            self.roomId = self.generateRoomId()
+            self.alertPresented = false
+        })
+
+        alertController.addAction(joinAction)
+        alertController.addAction(cancelAction)
+    }
+
+    @objc func roomNameChanged(_ sender: UITextField) {
+        joinAction.isEnabled = sender.text!.count > 3
+    }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (usernameTextField.text!.count > 1) {
+            return true
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.errorLabel.alpha = 1
+            }
+            return false
+        }
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -70,8 +122,19 @@ class JoinViewController: UIViewController {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
             shouldAutoJoin = false
             UserDefaults.store(username: usernameTextField.text!)
-            conferenceViewController.roomName = roomId
+            conferenceViewController.roomName = sender as? String ?? roomId
             conferenceViewController.displayName = usernameTextField.text!
+        }
+    }
+
+    @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
+        if (usernameTextField.text!.count > 1) {
+            self.alertPresented = true
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.errorLabel.alpha = 1
+            }
         }
     }
 
@@ -84,7 +147,11 @@ class JoinViewController: UIViewController {
     }
 
     @IBAction func usenameChanged(_ sender: UITextField) {
-        self.setCreateButtonEnabled(sender.text!.count > 1)
+        if (usernameTextField.text!.count > 1) {
+            UIView.animate(withDuration: 0.5) {
+                self.errorLabel.alpha = 0
+            }
+        }
     }
 
     func setCreateButtonEnabled(_ enabled: Bool) {
@@ -97,6 +164,10 @@ class JoinViewController: UIViewController {
     // MARK: - Keyboard management
 
     @objc func keyboardWillChange(notification: Notification) {
+        if alertPresented {
+            return
+        }
+
         if (fieldsViewFrame == nil) {
             fieldsViewFrame = fieldsView.frame
         }
@@ -115,15 +186,15 @@ class JoinViewController: UIViewController {
         }
 
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
-            if (curFrame.origin.y > targetFrame.origin.y) {
-                self.fieldsView.frame.origin.y = deltaY
-                self.backgroundView.alpha = 0.75
-            } else {
-                self.fieldsView.frame = self.fieldsViewFrame
-                self.backgroundView.alpha = 0
-            }
-            self.fieldsView.setNeedsLayout()
-        }, completion: nil)
+                if (curFrame.origin.y > targetFrame.origin.y) {
+                    self.fieldsView.frame.origin.y = deltaY
+                    self.backgroundView.alpha = 0.75
+                } else {
+                    self.fieldsView.frame = self.fieldsViewFrame
+                    self.backgroundView.alpha = 0
+                }
+                self.fieldsView.setNeedsLayout()
+            }, completion: nil)
 
     }
 

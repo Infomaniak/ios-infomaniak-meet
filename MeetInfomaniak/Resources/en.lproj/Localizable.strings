@@ -11,3 +11,9 @@
 "shareButton" = "Invite users";
 "title" = "Create or join a meeting";
 "shareText" = "Click the following link to join the meeting:";
+"mandatoryUsername" = "Mandatory nickname";
+"joinRoomTitle" = "Join an existing meeting";
+"joinRoomAlertDescription" = "Click on a share link or write the meeting ID here";
+"joinRoomButton" = "Join";
+"cancelButton" = "Cancel";
+"roomNameHint" = "Meeting ID";

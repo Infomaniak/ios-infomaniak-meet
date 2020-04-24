@@ -11,3 +11,9 @@
 "shareButton" = "Benutzer einladen";
 "title" = "Meeting erstellen oder teilnehmen";
 "shareText" = "Klicken Sie auf den folgenden Link, um dem Meeting beizutreten:\n";
+"mandatoryUsername" = "Pseudonym obligatorisch";
+"joinRoomTitle" = "Einer bereits laufenden Besprechung beitreten";
+"joinRoomAlertDescription" = "Klicken Sie auf den geteilten Link oder fügen Sie die ID Nummer der Besprechung hier ein";
+"joinRoomButton" = "Beitreten";
+"cancelButton" = "Abbrechen";
+"roomNameHint" = "ID der Besprechung";
