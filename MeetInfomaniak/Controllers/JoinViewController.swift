@@ -122,7 +122,7 @@ class JoinViewController: UIViewController {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
             shouldAutoJoin = false
             UserDefaults.store(username: usernameTextField.text!)
-            conferenceViewController.roomName = sender as? String ?? roomId
+            conferenceViewController.roomName = (sender as? String ?? roomId)?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             conferenceViewController.displayName = usernameTextField.text!
         }
     }
@@ -139,7 +139,7 @@ class JoinViewController: UIViewController {
     }
 
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        if let url = URL(string: "https://meet.infomaniak.com/\(roomId!)") {
+        if let url = URL(string: "https://meet.infomaniak.com/\(roomId.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)") {
             let activityVC = UIActivityViewController(activityItems: ["shareText".localized, url] as [Any], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = shareButton
             self.present(activityVC, animated: true, completion: nil)
