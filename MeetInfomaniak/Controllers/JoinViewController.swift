@@ -37,21 +37,12 @@ class JoinViewController: UIViewController {
         fieldsView.layer.shadowOpacity = 0.25
         fieldsView.layer.shadowOffset = .zero
         fieldsView.layer.shadowRadius = 10
-
-        self.setCreateButtonEnabled(false)
-
-        if roomId == nil {
-            roomId = generateRoomId()
-        } else {
-            joinMeetingButton.isHidden = true
-        }
-
+        
         if username != nil {
             usernameTextField.text = username
         }
 
         self.createAlertViewController()
-        self.setCreateButtonEnabled(true)
     }
     
     func generateRoomId() -> String {
@@ -111,10 +102,15 @@ class JoinViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        if roomId == nil {
+            roomId = generateRoomId()
+        }
         createButton.setTitle(shouldAutoJoin ? "acceptButton".localized : "createButton".localized, for: .normal)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        roomId = nil
+        shouldAutoJoin = false
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 

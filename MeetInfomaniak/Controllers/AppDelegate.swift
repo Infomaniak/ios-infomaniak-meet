@@ -13,7 +13,17 @@ import JitsiMeet
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        window?.rootViewController?.beginAppearanceTransition(false, animated: false)
+        window?.rootViewController?.endAppearanceTransition()
+    }
 
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        window?.rootViewController?.beginAppearanceTransition(true, animated: false)
+        window?.rootViewController?.endAppearanceTransition()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
