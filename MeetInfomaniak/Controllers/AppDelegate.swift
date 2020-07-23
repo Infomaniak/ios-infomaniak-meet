@@ -9,6 +9,7 @@
 import UIKit
 import JitsiMeet
 
+let baseServerURL = "https://meet.infomaniak.com"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
-            builder.serverURL = URL(string: "https://meet.infomaniak.com")
+            builder.serverURL = URL(string: baseServerURL)
         }
         JitsiMeet.sharedInstance().defaultConferenceOptions = jitisiOptions
         return true

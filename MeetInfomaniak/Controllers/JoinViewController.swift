@@ -135,7 +135,7 @@ class JoinViewController: UIViewController {
     }
 
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        if let url = URL(string: "https://meet.infomaniak.com/\(roomId.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)") {
+        if let url = URL(string: "\(baseServerURL)/\(roomId.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)") {
             let activityVC = UIActivityViewController(activityItems: ["shareText".localized, url] as [Any], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = shareButton
             self.present(activityVC, animated: true, completion: nil)
