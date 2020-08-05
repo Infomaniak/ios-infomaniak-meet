@@ -6,6 +6,7 @@
 	<array>
 		<string>applinks:meet.infomaniak.com</string>
 		<string>applinks:meet.demonstration.ch</string>
+		<string>applinks:kmeet.infomaniak.com</string>
 	</array>
 </dict>
 </plist>

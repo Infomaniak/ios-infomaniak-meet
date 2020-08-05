@@ -3,15 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
 		37650DB9243B6A15006C794B /* JitsiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */; };
 		37650DBA243B6A15006C794B /* JitsiMeet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37650DBB243B6A15006C794B /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; };
 		37650DBC243B6A15006C794B /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
+		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
 		37FF73582434850A003FC067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
 		37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
 		37FF735F2434850A003FC067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
@@ -40,9 +42,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		37A6DD30243B51E400DD8E79 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
 		37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JitsiMeet.framework; sourceTree = "<group>"; };
+		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		37FF73542434850A003FC067 /* kMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FF73572434850A003FC067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FF735B2434850A003FC067 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		37FF738D2435DB2A003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37FF738E2435DB2B003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37FF738F2435DB2B003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			files = (
 				37650DB9243B6A15006C794B /* JitsiMeet.framework in Frameworks */,
 				37650DBB243B6A15006C794B /* WebRTC.framework in Frameworks */,
+				34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +101,7 @@
 				37FF73562434850A003FC067 /* MeetInfomaniak */,
 				37FF73552434850A003FC067 /* Products */,
 				DA37EEDD0FD9C2AA9DC0578C /* Pods */,
+				B0016E280F08D39872DF0A2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +151,7 @@
 		37FF737D2435D219003FC067 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */,
 				37FF73572434850A003FC067 /* AppDelegate.swift */,
 				37FF735B2434850A003FC067 /* JoinViewController.swift */,
 				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
@@ -150,9 +159,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B0016E280F08D39872DF0A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA37EEDD0FD9C2AA9DC0578C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */,
+				9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -164,11 +183,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37FF73682434850C003FC067 /* Build configuration list for PBXNativeTarget "MeetInfomaniak" */;
 			buildPhases = (
+				EA73A747CB19ADE01C56FCFA /* [CP] Check Pods Manifest.lock */,
 				37FF73502434850A003FC067 /* Sources */,
 				37FF73512434850A003FC067 /* Frameworks */,
 				37FF73522434850A003FC067 /* Resources */,
 				37650DBD243B6A16006C794B /* Embed Frameworks */,
 				37A6DD3E243B5A0200DD8E79 /* Fix Frameworks */,
+				A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +271,45 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\n\n# This script gets executed from Xcode to fixup the embedded frameworks and\n# bundle the necessary architectures.\n\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        if lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\" | grep -q -v \"^Non-fat\"\n        then\n            echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n            lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n            EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n        fi\n    done\n\n    if [ -n \"$EXTRACTED_ARCHS\" ]\n    then\n        echo \"Merging extracted architectures: ${ARCHS}\"\n        lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n        rm \"${EXTRACTED_ARCHS[@]}\"\n\n        echo \"Replacing original executable with thinned version\"\n        rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n        mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n    fi\ndone\n";
 		};
+		A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA73A747CB19ADE01C56FCFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetInfomaniak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
+				37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
 				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
 				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
@@ -430,6 +491,7 @@
 		};
 		37FF73692434850C003FC067 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
@@ -455,6 +517,7 @@
 		};
 		37FF736A2434850C003FC067 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
