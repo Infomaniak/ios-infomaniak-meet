@@ -11,13 +11,16 @@ import MaterialComponents.MaterialTextFields
 
 class JoinViewController: UIViewController {
 
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet var centerConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var usernameTextField: MDCTextField!
     @IBOutlet weak var roomLinkTextField: MDCTextField!
     @IBOutlet weak var joinMeetingButton: UIButton!
+    @IBOutlet weak var contentView: UIView!
     private var usernameFieldController: MDCTextInputControllerOutlined?
     private var roomLinkFieldController: MDCTextInputControllerOutlined?
-    private var viewFrame: CGRect?
 
     private let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     private var roomId: String!
@@ -68,10 +71,10 @@ class JoinViewController: UIViewController {
             roomId = generateRoomId()
         }
     }
-    
+
     @objc func infoButtonPressed() {
         let alertController = UIAlertController(title: "", message: "copyLinkExplanation".localized, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "okButton".localized, style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
@@ -84,7 +87,7 @@ class JoinViewController: UIViewController {
     }
 
     private func extractRoomIdFromUrl(_ url: URL) -> String? {
-        if url.absoluteString.starts(with: baseServerURL) || url.absoluteString.starts(with: "https://meet.infomaniak.com")  {
+        if url.absoluteString.starts(with: baseServerURL) || url.absoluteString.starts(with: "https://meet.infomaniak.com") {
             if let hash = URLComponents(url: url, resolvingAgainstBaseURL: true)?.path.replacingOccurrences(of: "/", with: "") {
                 return hash.count > 0 ? hash : nil
             }
@@ -171,16 +174,8 @@ class JoinViewController: UIViewController {
         roomId = sender.text
     }
 
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        viewFrame = nil
-    }
-
 // MARK: - Keyboard management
     @objc func keyboardWillChange(notification: Notification) {
-        if (viewFrame == nil) {
-            viewFrame = view.frame
-        }
-
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -188,13 +183,15 @@ class JoinViewController: UIViewController {
 
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
                 if (curFrame.origin.y > targetFrame.origin.y) {
-                    var newFrame = self.viewFrame!
-                    newFrame.origin.y = -targetFrame.size.height
-                    self.view.frame = newFrame
-                } else {
-                    self.view.frame = self.viewFrame!
+                    self.topConstraint.constant = -targetFrame.height
+                    self.centerConstraint.isActive = false
+                    self.bottomConstraint.constant = targetFrame.height
+                } else if curFrame.origin.y < targetFrame.origin.y {
+                    self.topConstraint.constant = 16
+                    self.centerConstraint.isActive = true
+                    self.bottomConstraint.constant = 16
                 }
-                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
             }, completion: nil)
     }
 

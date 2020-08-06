@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYs-ge-4Vf">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="zVa-VQ-HLm" customClass="ConferenceViewController" customModule="kMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qj9-WU-AkW" customClass="JitsiMeetView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YWc-co-IRw"/>
@@ -30,14 +31,14 @@
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tYs-ge-4Vf" customClass="InitialViewController" customModule="kMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xGm-Gw-8V1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcV-9N-yeH">
-                                <rect key="frame" x="0.0" y="714" width="414" height="214"/>
+                                <rect key="frame" x="0.0" y="420" width="320" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-ty-Tqh">
-                                        <rect key="frame" x="16" y="82" width="382" height="50"/>
+                                        <rect key="frame" x="16" y="82" width="288" height="50"/>
                                         <color key="backgroundColor" name="secondaryTint"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pe3-zT-BaL"/>
@@ -56,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffu-TI-Iwb">
-                                        <rect key="frame" x="16" y="16" width="382" height="50"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="50"/>
                                         <color key="backgroundColor" name="infomaniakTint"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="J6k-AK-ztz"/>
@@ -83,6 +84,7 @@
                                     <constraint firstItem="yyF-ty-Tqh" firstAttribute="leading" secondItem="kcV-9N-yeH" secondAttribute="leading" constant="16" id="OlN-ua-M34"/>
                                     <constraint firstItem="Ffu-TI-Iwb" firstAttribute="top" secondItem="kcV-9N-yeH" secondAttribute="top" constant="16" id="QWD-C2-VLc"/>
                                     <constraint firstAttribute="trailing" secondItem="Ffu-TI-Iwb" secondAttribute="trailing" constant="16" id="TY1-Oi-xjZ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="h8D-W4-9id"/>
                                     <constraint firstItem="Ffu-TI-Iwb" firstAttribute="leading" secondItem="kcV-9N-yeH" secondAttribute="leading" constant="16" id="kjh-bG-Egt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -92,10 +94,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illu-home" translatesAutoresizingMaskIntoConstraints="NO" id="CjN-Xm-MfC">
-                                <rect key="frame" x="83" y="214" width="248" height="500"/>
+                                <rect key="frame" x="64" y="197" width="192" height="223"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="logo-meet" translatesAutoresizingMaskIntoConstraints="NO" id="Y0r-tb-67E">
-                                <rect key="frame" x="103.5" y="44" width="207" height="121"/>
+                                <rect key="frame" x="80" y="44" width="160" height="121"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="rootViewBackground"/>
@@ -103,14 +105,15 @@
                             <constraint firstItem="Y0r-tb-67E" firstAttribute="top" secondItem="xGm-Gw-8V1" secondAttribute="top" constant="44" id="2Cw-d6-9AJ"/>
                             <constraint firstItem="kcV-9N-yeH" firstAttribute="top" secondItem="CjN-Xm-MfC" secondAttribute="bottom" id="8yY-MZ-IO6"/>
                             <constraint firstItem="GEK-An-e0b" firstAttribute="bottom" secondItem="yyF-ty-Tqh" secondAttribute="bottom" constant="16" id="90N-Gt-XFi"/>
-                            <constraint firstItem="kcV-9N-yeH" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" id="NU0-w6-fH1"/>
+                            <constraint firstItem="kcV-9N-yeH" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="Iax-t9-BQL"/>
+                            <constraint firstItem="kcV-9N-yeH" firstAttribute="leading" secondItem="GEK-An-e0b" secondAttribute="leading" priority="750" id="NU0-w6-fH1"/>
                             <constraint firstItem="Y0r-tb-67E" firstAttribute="width" secondItem="xGm-Gw-8V1" secondAttribute="width" multiplier="0.5" id="TTB-JE-d4N"/>
                             <constraint firstItem="CjN-Xm-MfC" firstAttribute="width" secondItem="xGm-Gw-8V1" secondAttribute="width" multiplier="0.6" id="VKP-sr-v4Z"/>
                             <constraint firstItem="CjN-Xm-MfC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y0r-tb-67E" secondAttribute="bottom" constant="32" id="dfs-3y-9Sv"/>
                             <constraint firstAttribute="bottom" secondItem="kcV-9N-yeH" secondAttribute="bottom" constant="-32" id="hJ7-WL-OaN"/>
                             <constraint firstItem="Y0r-tb-67E" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="nQn-FM-cn7"/>
                             <constraint firstItem="CjN-Xm-MfC" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="vJP-L4-F99"/>
-                            <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="kcV-9N-yeH" secondAttribute="trailing" id="xVm-pk-bc3"/>
+                            <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="kcV-9N-yeH" secondAttribute="trailing" priority="750" id="xVm-pk-bc3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GEK-An-e0b"/>
                     </view>
@@ -125,101 +128,99 @@
         <!--Join View Controller-->
         <scene sceneID="r10-XF-LnW">
             <objects>
-                <viewController storyboardIdentifier="JoinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GJ1-26-seI" customClass="JoinViewController" customModule="kMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GJ1-26-seI" customClass="JoinViewController" customModule="kMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XaI-s9-5L9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
-                                <rect key="frame" x="16" y="742" width="382" height="50"/>
-                                <color key="backgroundColor" name="infomaniakTint"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OX2-jN-hfE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Rejoindre la réunion"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="startButton"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKeyDisabled" value="startButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinMeetingButtonPressed:" destination="GJ1-26-seI" eventType="touchUpInside" id="Hcg-zM-Zmw"/>
-                                    <segue destination="zVa-VQ-HLm" kind="show" identifier="goToConferenceRoomSegue" id="yMA-BM-R0u"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
-                                <rect key="frame" x="16" y="666" width="382" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-o9-ELb">
+                                <rect key="frame" x="10" y="35" width="300" height="498"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu" customClass="MDCTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="hintMeetCode"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="roomIdChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="192-Kz-0Fl"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom affiché dans la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-CC-l6Q" customClass="MDCTextField">
-                                        <rect key="frame" x="0.0" y="38" width="382" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="hintUserNameField"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="usenameChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="Q4s-DG-ykM"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oC-CU-OfF">
-                                <rect key="frame" x="32" y="32" width="350" height="562"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joinParrot" translatesAutoresizingMaskIntoConstraints="NO" id="0Wu-8U-ZXZ">
-                                        <rect key="frame" x="71.5" y="177.5" width="207" height="207"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="joinParrot" translatesAutoresizingMaskIntoConstraints="NO" id="0Wu-8U-ZXZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="0Wu-8U-ZXZ" secondAttribute="height" multiplier="1:1" id="Gip-br-Xn3"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="6Wz-In-eHV"/>
+                                            <constraint firstAttribute="width" secondItem="0Wu-8U-ZXZ" secondAttribute="height" multiplier="1:1" id="Y7v-Nx-C1C"/>
                                         </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T61-Dg-5QS">
+                                        <rect key="frame" x="6" y="332" width="288" height="166"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Quelle réunion souhaitez-vous rejoindre ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-LA-4bf">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="titleJoin"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
+                                                <rect key="frame" x="0.0" y="56" width="288" height="52"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu" customClass="MDCTextField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="hintMeetCode"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="roomIdChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="192-Kz-0Fl"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom affiché dans la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-CC-l6Q" customClass="MDCTextField">
+                                                        <rect key="frame" x="0.0" y="30" width="288" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="hintUserNameField"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="usenameChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="Q4s-DG-ykM"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
+                                                <rect key="frame" x="0.0" y="116" width="288" height="50"/>
+                                                <color key="backgroundColor" name="infomaniakTint"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RrG-PP-J9n"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Rejoindre la réunion"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="startButton"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKeyDisabled" value="startButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="joinMeetingButtonPressed:" destination="GJ1-26-seI" eventType="touchUpInside" id="Hcg-zM-Zmw"/>
+                                                    <segue destination="zVa-VQ-HLm" kind="show" identifier="goToConferenceRoomSegue" id="yMA-BM-R0u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="FjW-b8-0Um"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="0Wu-8U-ZXZ" firstAttribute="centerY" secondItem="7oC-CU-OfF" secondAttribute="centerY" id="b7E-Kh-LOl"/>
-                                    <constraint firstItem="0Wu-8U-ZXZ" firstAttribute="centerX" secondItem="7oC-CU-OfF" secondAttribute="centerX" id="jfd-IP-yas"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle réunion souhaitez-vous rejoindre ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-LA-4bf">
-                                <rect key="frame" x="16" y="626" width="382" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" name="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="titleJoin"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gXz-Nc-58G" firstAttribute="bottom" secondItem="6Bf-hY-DIg" secondAttribute="bottom" constant="16" id="0JW-IY-bh9"/>
-                            <constraint firstItem="751-Pa-Jyx" firstAttribute="top" secondItem="gAb-LA-4bf" secondAttribute="bottom" constant="16" id="2vF-FW-8JQ"/>
-                            <constraint firstItem="7oC-CU-OfF" firstAttribute="leading" secondItem="gXz-Nc-58G" secondAttribute="leading" constant="32" id="A8z-hl-IWa"/>
-                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="751-Pa-Jyx" secondAttribute="trailing" constant="16" id="BbX-Fp-6rq"/>
-                            <constraint firstItem="gAb-LA-4bf" firstAttribute="leading" secondItem="gXz-Nc-58G" secondAttribute="leading" constant="16" id="Bfp-9e-TOA"/>
-                            <constraint firstItem="0Wu-8U-ZXZ" firstAttribute="width" secondItem="XaI-s9-5L9" secondAttribute="width" multiplier="0.5" id="SZw-wE-vJj"/>
-                            <constraint firstItem="7oC-CU-OfF" firstAttribute="top" secondItem="gXz-Nc-58G" secondAttribute="top" constant="32" id="Vup-7Y-FyB"/>
-                            <constraint firstItem="6Bf-hY-DIg" firstAttribute="top" secondItem="751-Pa-Jyx" secondAttribute="bottom" constant="16" id="bdx-VS-kMT"/>
-                            <constraint firstItem="751-Pa-Jyx" firstAttribute="leading" secondItem="gXz-Nc-58G" secondAttribute="leading" constant="16" id="cEd-Us-X2y"/>
-                            <constraint firstItem="6Bf-hY-DIg" firstAttribute="leading" secondItem="gXz-Nc-58G" secondAttribute="leading" constant="16" id="hLI-IH-Hkn"/>
-                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="6Bf-hY-DIg" secondAttribute="trailing" constant="16" id="jG8-O1-SSH"/>
-                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="7oC-CU-OfF" secondAttribute="trailing" constant="32" id="kTs-HJ-2Od"/>
-                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="gAb-LA-4bf" secondAttribute="trailing" constant="16" id="quM-O2-BK4"/>
-                            <constraint firstItem="gAb-LA-4bf" firstAttribute="top" secondItem="7oC-CU-OfF" secondAttribute="bottom" constant="32" id="vgO-Sm-Nb3"/>
+                            <constraint firstItem="mQ0-o9-ELb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gXz-Nc-58G" secondAttribute="top" constant="16" id="0Fi-b2-3z7"/>
+                            <constraint firstItem="mQ0-o9-ELb" firstAttribute="centerX" secondItem="XaI-s9-5L9" secondAttribute="centerX" id="8EN-9b-FmB"/>
+                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mQ0-o9-ELb" secondAttribute="trailing" id="DLp-2G-x38"/>
+                            <constraint firstItem="mQ0-o9-ELb" firstAttribute="centerY" secondItem="XaI-s9-5L9" secondAttribute="centerY" id="L9s-iy-DU5"/>
+                            <constraint firstItem="gXz-Nc-58G" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mQ0-o9-ELb" secondAttribute="bottom" constant="16" id="La4-v6-aOu"/>
+                            <constraint firstItem="T61-Dg-5QS" firstAttribute="leading" secondItem="gXz-Nc-58G" secondAttribute="leading" priority="750" constant="16" id="jcf-cr-gQK"/>
+                            <constraint firstItem="mQ0-o9-ELb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gXz-Nc-58G" secondAttribute="leading" id="ke7-EU-lqo"/>
+                            <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="T61-Dg-5QS" secondAttribute="trailing" priority="750" constant="16" id="l5x-Q8-uCB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gXz-Nc-58G"/>
                     </view>
@@ -227,15 +228,19 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="h5l-ct-tLg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="La4-v6-aOu" id="pDB-Um-9iV"/>
+                        <outlet property="centerConstraint" destination="L9s-iy-DU5" id="lEJ-xz-vbP"/>
+                        <outlet property="contentView" destination="mQ0-o9-ELb" id="fgN-tC-qCm"/>
                         <outlet property="joinMeetingButton" destination="6Bf-hY-DIg" id="2Bb-gI-q3h"/>
                         <outlet property="roomLinkTextField" destination="j5l-t3-dNu" id="sxY-TC-CwS"/>
                         <outlet property="titleLabel" destination="gAb-LA-4bf" id="u4B-h0-Ryx"/>
+                        <outlet property="topConstraint" destination="0Fi-b2-3z7" id="jJt-wt-DLC"/>
                         <outlet property="usernameTextField" destination="dVe-CC-l6Q" id="5mu-RK-KHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7g2-kF-AG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.2" y="127.83251231527095"/>
+            <point key="canvasLocation" x="1853.90625" y="127.14843749999999"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
