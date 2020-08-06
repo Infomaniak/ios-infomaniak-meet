@@ -5,15 +5,13 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
-"userNameHint" = "Wählen Sie ein Pseudonym";
-"createButton" = "Erstellen Sie das Meeting";
-"acceptButton" = "Einladung annehmen";
-"shareButton" = "Benutzer einladen";
-"title" = "Meeting erstellen oder teilnehmen";
-"shareText" = "Klicken Sie auf den folgenden Link, um dem Meeting beizutreten:\n";
-"mandatoryUsername" = "Pseudonym obligatorisch";
-"joinRoomTitle" = "Einer bereits laufenden Besprechung beitreten";
-"joinRoomAlertDescription" = "Klicken Sie auf den geteilten Link oder fügen Sie die ID Nummer der Besprechung hier ein";
-"joinRoomButton" = "Beitreten";
-"cancelButton" = "Abbrechen";
-"roomNameHint" = "ID der Besprechung";
+"createButton" = "Neues Meeting starten";
+"hintMeetCode" = "Code oder Link des Meetings";
+"hintUserNameField" = "Im Meeting angezeigter Name";
+"joinButton" = "Mit Code oder Link beitreten";
+"mandatoryField" = "Pflichtfeld";
+"mandatoryUserName" = "Pseudonym obligatorisch";
+"startButton" = "Dem Meeting beitreten";
+"titleCreate" = "Wie lautet Ihr Name ?";
+"titleJoin" = "Welchem Meeting möchten Sie beitreten ?";
+"copyLinkExplanation" = "Kopieren Sie den Link oder Code, den der Organisator der Besprechung Ihnen gegeben hat, und fügen Sie ihn ein.";

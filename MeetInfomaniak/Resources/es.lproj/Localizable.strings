@@ -5,15 +5,13 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
-"userNameHint" = "Elegir un apodo";
-"createButton" = "Crear la reunión";
-"acceptButton" = "Acepta la invitación";
-"shareButton" = "Invitar a los usuarios";
-"title" = "Crear o unirse a una reunión";
-"shareText" = "Presione en el siguiente enlace para unirse a la reunión:\n";
-"mandatoryUsername" = "Pseudo obligatoire";
-"joinRoomTitle" = "Participar en una reunión existente";
-"joinRoomAlertDescription" = "Haga clic en un enlace para compartir o escriba el ID de la reunión aquí";
-"joinRoomButton" = "Únete a";
-"cancelButton" = "Cancelar";
-"roomNameHint" = "ID de la reunión";
+"createButton" = "Empezar una nueva reunión";
+"hintMeetCode" = "Código o enlace de la reunión";
+"hintUserNameField" = "Nombre que se muestra en la reunión";
+"joinButton" = "Unirse con un código o un enlace";
+"mandatoryField" = "Campo obligatorio";
+"mandatoryUserName" = "Pseudo-obligatorio";
+"startButton" = "Unirse a la reunión";
+"titleCreate" = "¿Cómo te llamas?";
+"titleJoin" = "¿A qué reunión deseas unirte?";
+"copyLinkExplanation" = "Copie/pegue el enlace o código que el organizador de la reunión le dio.";

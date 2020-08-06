@@ -151,7 +151,7 @@ class JoinViewController: UIViewController {
 
     @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
         if usernameTextField.text!.count < 2 {
-            usernameFieldController?.setErrorText("mandatoryUsername".localized, errorAccessibilityValue: "mandatoryUsername".localized)
+            usernameFieldController?.setErrorText("mandatoryUserName".localized, errorAccessibilityValue: "mandatoryUserName".localized)
         }
         if roomLinkTextField.text!.count < 1 {
             roomLinkFieldController?.setErrorText("mandatoryField".localized, errorAccessibilityValue: "mandatoryField".localized)
