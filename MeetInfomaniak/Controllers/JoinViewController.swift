@@ -112,6 +112,7 @@ class JoinViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         if joining {
             if let url = joinUrl {
@@ -131,16 +132,21 @@ class JoinViewController: UIViewController {
                 }
             }
         } else {
+            joinMeetingButton.setTitle("createButton".localized, for: .normal)
+            joinMeetingButton.setTitle("createButton".localized, for: .disabled)
+            titleLabel.text = "titleCreate".localized
             roomLinkTextField.isHidden = true
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         roomLinkTextField.endEditing(true)
         usernameTextField.endEditing(true)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
