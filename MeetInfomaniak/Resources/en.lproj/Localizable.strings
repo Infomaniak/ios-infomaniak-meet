@@ -5,6 +5,8 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
+"codeDoesntExistError" = "The code you’ve entered is no longer valid or the meeting no longer exists. Please contact the person who invited you to join the meeting.";
+"copyLinkExplanation" = "Copy/paste the link or code given to you by the meeting organizer.";
 "createButton" = "Start a new meeting";
 "hintMeetCode" = "Meeting code or link";
 "hintUserNameField" = "Name displayed in the meeting";
@@ -14,4 +16,3 @@
 "startButton" = "Join the meeting";
 "titleCreate" = "What’s your name ?";
 "titleJoin" = "Which meeting would you like to join ?";
-"copyLinkExplanation" = "Copy/paste the link or code given to you by the meeting organizer.";

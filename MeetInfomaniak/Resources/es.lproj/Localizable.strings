@@ -5,6 +5,8 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
+"codeDoesntExistError" = "El código que has introducido ya no es válido o no existe la reunión. Ponte en contacto con la persona que te ha invitado a unirte a la reunión.";
+"copyLinkExplanation" = "Copie/pegue el enlace o código que el organizador de la reunión le dio.";
 "createButton" = "Empezar una nueva reunión";
 "hintMeetCode" = "Código o enlace de la reunión";
 "hintUserNameField" = "Nombre que se muestra en la reunión";
@@ -14,4 +16,3 @@
 "startButton" = "Unirse a la reunión";
 "titleCreate" = "¿Cómo te llamas?";
 "titleJoin" = "¿A qué reunión deseas unirte?";
-"copyLinkExplanation" = "Copie/pegue el enlace o código que el organizador de la reunión le dio.";

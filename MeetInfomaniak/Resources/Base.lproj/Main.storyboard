@@ -200,7 +200,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="joinMeetingButtonPressed:" destination="GJ1-26-seI" eventType="touchUpInside" id="Hcg-zM-Zmw"/>
-                                                    <segue destination="zVa-VQ-HLm" kind="show" identifier="goToConferenceRoomSegue" id="yMA-BM-R0u"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -236,6 +235,7 @@
                         <outlet property="titleLabel" destination="gAb-LA-4bf" id="u4B-h0-Ryx"/>
                         <outlet property="topConstraint" destination="0Fi-b2-3z7" id="jJt-wt-DLC"/>
                         <outlet property="usernameTextField" destination="dVe-CC-l6Q" id="5mu-RK-KHo"/>
+                        <segue destination="zVa-VQ-HLm" kind="show" identifier="goToConferenceRoomSegue" id="UZZ-Mj-0QD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7g2-kF-AG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,10 @@
 		37650DBC243B6A15006C794B /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
+		37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
+		37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
+		37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115024E2795D005E370E /* ApiFetcher.swift */; };
+		37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115224E281B8005E370E /* UIButton+Extension.swift */; };
 		37FF73582434850A003FC067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
 		37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
 		37FF735F2434850A003FC067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		37A6DD30243B51E400DD8E79 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
 		37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JitsiMeet.framework; sourceTree = "<group>"; };
 		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		37F3114A24E270B8005E370E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		37F3114E24E2730D005E370E /* CodeRoomName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRoomName.swift; sourceTree = "<group>"; };
+		37F3115024E2795D005E370E /* ApiFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFetcher.swift; sourceTree = "<group>"; };
+		37F3115224E281B8005E370E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		37FF73542434850A003FC067 /* kMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FF73572434850A003FC067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FF735B2434850A003FC067 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,16 @@
 			path = Frameworks;
 			sourceTree = SOURCE_ROOT;
 		};
+		37F3114924E270A0005E370E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				37F3114A24E270B8005E370E /* ApiResponse.swift */,
+				37F3114E24E2730D005E370E /* CodeRoomName.swift */,
+				37F3115024E2795D005E370E /* ApiFetcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		37FF734B2434850A003FC067 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +138,7 @@
 				37FF73782435CC8D003FC067 /* Extensions */,
 				37FF736E2435CB41003FC067 /* Resources */,
 				37FF737D2435D219003FC067 /* Controllers */,
+				37F3114924E270A0005E370E /* Networking */,
 			);
 			path = MeetInfomaniak;
 			sourceTree = "<group>";
@@ -142,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */,
+				37F3115224E281B8005E370E /* UIButton+Extension.swift */,
 				37FF73792435CCE3003FC067 /* Localizable.swift */,
 				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
 			);
@@ -319,9 +339,13 @@
 			files = (
 				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
 				37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */,
+				37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */,
+				37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
 				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
+				37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */,
 				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
+				37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */,
 				37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */,
 				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,
 			);

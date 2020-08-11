@@ -5,6 +5,8 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
+"codeDoesntExistError" = "Le code que vous avez renseigné n’est plus valable ou la réunion n’existe plus. Veuillez contacter la personne qui vous a invité à rejoindre la réunion.";
+"copyLinkExplanation" = "Copiez/coller le lien ou le code que l’organisateur de la réunion vous a donné.";
 "createButton" = "Démarrer une nouvelle réunion";
 "hintMeetCode" = "Code ou lien de la réunion";
 "hintUserNameField" = "Nom affiché dans la réunion";
@@ -14,4 +16,3 @@
 "startButton" = "Rejoindre la réunion";
 "titleCreate" = "Quel est votre nom ?";
 "titleJoin" = "Quelle réunion souhaitez-vous rejoindre ?";
-"copyLinkExplanation" = "Copiez/coller le lien ou le code que l’organisateur de la réunion vous a donné.";

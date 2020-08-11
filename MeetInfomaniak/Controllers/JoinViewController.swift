@@ -21,7 +21,9 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     private var usernameFieldController: MDCTextInputControllerOutlined?
     private var roomLinkFieldController: MDCTextInputControllerOutlined?
+    private var infoButton: UIButton!
 
+    private let roomCodeRegex = try! NSRegularExpression(pattern: #"^(\d{3}-\d{4}-\d{3}|\d{10})$"#)
     private let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     private var roomId: String!
     private let username = UserDefaults.getUsername()
@@ -57,7 +59,7 @@ class JoinViewController: UIViewController {
         roomLinkTextField.textColor = UIColor(named: "textColor")
         roomLinkTextField.trailingViewMode = .always
 
-        let infoButton = UIButton(type: .custom)
+        infoButton = UIButton(type: .custom)
         infoButton.setImage(UIImage(named: "ic_info"), for: .normal)
         infoButton.tintColor = UIColor(named: "outlineColor")!
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
@@ -72,11 +74,19 @@ class JoinViewController: UIViewController {
         }
     }
 
-    @objc func infoButtonPressed() {
-        let alertController = UIAlertController(title: "", message: "copyLinkExplanation".localized, preferredStyle: .alert)
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
+    }
+
+    @objc func infoButtonPressed(error: Bool) {
+        showAlert(title: "", message: "copyLinkExplanation".localized)
+    }
+
+    @objc func infoErrorButtonPressed() {
+        showAlert(title: "", message: "codeDoesntExistError".localized)
     }
 
     private func fillRoomLinkWithUrl(_ url: URL) {
@@ -103,7 +113,7 @@ class JoinViewController: UIViewController {
         return String((0..<16).map { _ in hashCharList.randomElement()! })
     }
 
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    func canStartMeeting() -> Bool {
         if joining {
             return usernameTextField.text!.count > 1 && roomLinkTextField.text!.count > 0
         } else {
@@ -123,7 +133,7 @@ class JoinViewController: UIViewController {
                 }
             } else if UIPasteboard.general.hasStrings {
                 if let possibleRoomLink = UIPasteboard.general.string {
-                    if possibleRoomLink.count == 16 {
+                    if possibleRoomLink.count == 16 || roomCodeRegex.matches(in: possibleRoomLink, options: [], range: NSRange(location: 0, length: possibleRoomLink.utf16.count)).count > 0 {
                         roomLinkTextField.text = possibleRoomLink
                         roomId = possibleRoomLink
                     } else if let url = URL(string: possibleRoomLink) {
@@ -153,18 +163,46 @@ class JoinViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
             UserDefaults.store(username: usernameTextField.text!)
-            conferenceViewController.roomName = (sender as? String ?? roomId)?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            conferenceViewController.roomName = roomId.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             conferenceViewController.displayName = usernameTextField.text!
         }
     }
 
     @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
+        joinMeetingButton.setLoading(true)
         if usernameTextField.text!.count < 2 {
             usernameFieldController?.setErrorText("mandatoryUserName".localized, errorAccessibilityValue: "mandatoryUserName".localized)
         }
-        if roomLinkTextField.text!.count < 1 {
+
+        let roomText = roomLinkTextField.text!
+        if roomText.count < 1 {
             roomLinkFieldController?.setErrorText("mandatoryField".localized, errorAccessibilityValue: "mandatoryField".localized)
         }
+
+        if canStartMeeting() {
+            if roomCodeRegex.matches(in: roomText, options: [], range: NSRange(location: 0, length: roomText.utf16.count)).count > 0 {
+                ApiFetcher.getRoomNameFromCode(roomText.replacingOccurrences(of: "-", with: "")) { (response, error) in
+                    DispatchQueue.main.async {
+                        if error != nil {
+                            self.roomLinkFieldController?.setErrorText("", errorAccessibilityValue: "codeDoesntExistError".localized)
+                            self.infoButton.tintColor = self.roomLinkFieldController?.errorColor
+                            self.infoButton.removeTarget(self, action: nil, for: .touchUpInside)
+                            self.infoButton.addTarget(self, action: #selector(JoinViewController.infoErrorButtonPressed), for: .touchUpInside)
+                        } else {
+                            self.roomId = response?.data.name
+                            self.performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+                        }
+                        self.joinMeetingButton.setLoading(false)
+                    }
+                }
+            } else {
+                joinMeetingButton.setLoading(false)
+                performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+            }
+        } else {
+            joinMeetingButton.setLoading(false)
+        }
+
     }
 
     @IBAction func usenameChanged(_ sender: UITextField) {
@@ -177,6 +215,11 @@ class JoinViewController: UIViewController {
         if roomLinkTextField.text!.count > 0 {
             roomLinkFieldController?.setErrorText(nil, errorAccessibilityValue: nil)
         }
+
+        infoButton.tintColor = UIColor(named: "outlineColor")!
+        infoButton.removeTarget(self, action: nil, for: .touchUpInside)
+        infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
+
         roomId = sender.text
     }
 

@@ -5,6 +5,8 @@
   Created by Philippe Weidmann on 02.04.20.
   Copyright © 2020 Philippe Weidmann. All rights reserved.
 */
+"codeDoesntExistError" = "Der von Ihnen eingegebene Code ist entweder nicht mehr gültig, oder das Meeting ist bereits beendet. Bitte wenden Sie sich an die Person, die Sie zu dem Meeting eingeladen hat.";
+"copyLinkExplanation" = "Kopieren Sie den Link oder Code, den der Organisator der Besprechung Ihnen gegeben hat, und fügen Sie ihn ein.";
 "createButton" = "Neues Meeting starten";
 "hintMeetCode" = "Code oder Link des Meetings";
 "hintUserNameField" = "Im Meeting angezeigter Name";
@@ -14,4 +16,3 @@
 "startButton" = "Dem Meeting beitreten";
 "titleCreate" = "Wie lautet Ihr Name ?";
 "titleJoin" = "Welchem Meeting möchten Sie beitreten ?";
-"copyLinkExplanation" = "Kopieren Sie den Link oder Code, den der Organisator der Besprechung Ihnen gegeben hat, und fügen Sie ihn ein.";
