@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import JitsiMeet
+import JitsiMeetSDK
+/* strip bitcode before pusing: xcrun bitcode_strip -r WebRTC.framework/WebRTC -o WebRTC.framework/WebRTC*/
 
 let baseServerURL = "https://kmeet.infomaniak.com"
 @UIApplicationMain
@@ -19,10 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController?.beginAppearanceTransition(true, animated: false)
         window?.rootViewController?.endAppearanceTransition()
     }
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
             builder.serverURL = URL(string: baseServerURL)
+            builder.setFeatureFlag("recording.enabled", withBoolean: false)
+            builder.setFeatureFlag("video-share.enabled", withBoolean: false)
+            builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
         }
         JitsiMeet.sharedInstance().defaultConferenceOptions = jitisiOptions
 

@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
-		37650DB9243B6A15006C794B /* JitsiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */; };
-		37650DBA243B6A15006C794B /* JitsiMeet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		37650DBB243B6A15006C794B /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; };
-		37650DBC243B6A15006C794B /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6DD30243B51E400DD8E79 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CDF8025A5CD7500C6843C /* JitsiMeetSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375CDF7C25A5CD3600C6843C /* JitsiMeetSDK.xcframework */; };
+		375CDF8125A5CD7500C6843C /* JitsiMeetSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 375CDF7C25A5CD3600C6843C /* JitsiMeetSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		375CDF8225A5CD7600C6843C /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375CDF7E25A5CD4500C6843C /* WebRTC.xcframework */; };
+		375CDF8325A5CD7600C6843C /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 375CDF7E25A5CD4500C6843C /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
 		37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
@@ -31,14 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		37650DBD243B6A16006C794B /* Embed Frameworks */ = {
+		375CDF6625A5ADA000C6843C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37650DBA243B6A15006C794B /* JitsiMeet.framework in Embed Frameworks */,
-				37650DBC243B6A15006C794B /* WebRTC.framework in Embed Frameworks */,
+				375CDF8325A5CD7600C6843C /* WebRTC.xcframework in Embed Frameworks */,
+				375CDF8125A5CD7500C6843C /* JitsiMeetSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,9 +47,9 @@
 
 /* Begin PBXFileReference section */
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
+		375CDF7C25A5CD3600C6843C /* JitsiMeetSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JitsiMeetSDK.xcframework; sourceTree = "<group>"; };
+		375CDF7E25A5CD4500C6843C /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WebRTC.xcframework; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
-		37A6DD30243B51E400DD8E79 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
-		37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JitsiMeet.framework; sourceTree = "<group>"; };
 		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		37F3114A24E270B8005E370E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		37F3114E24E2730D005E370E /* CodeRoomName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRoomName.swift; sourceTree = "<group>"; };
@@ -85,20 +85,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37650DB9243B6A15006C794B /* JitsiMeet.framework in Frameworks */,
-				37650DBB243B6A15006C794B /* WebRTC.framework in Frameworks */,
 				34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */,
+				375CDF8025A5CD7500C6843C /* JitsiMeetSDK.xcframework in Frameworks */,
+				375CDF8225A5CD7600C6843C /* WebRTC.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37A6DD2F243B51E400DD8E79 /* Frameworks */ = {
+		37083EF525A5AB1B00163D24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37A6DD30243B51E400DD8E79 /* WebRTC.framework */,
-				37A6DD31243B51E400DD8E79 /* JitsiMeet.framework */,
+				375CDF7C25A5CD3600C6843C /* JitsiMeetSDK.xcframework */,
+				375CDF7E25A5CD4500C6843C /* WebRTC.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -134,7 +134,7 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
-				37A6DD2F243B51E400DD8E79 /* Frameworks */,
+				37083EF525A5AB1B00163D24 /* Frameworks */,
 				37FF73782435CC8D003FC067 /* Extensions */,
 				37FF736E2435CB41003FC067 /* Resources */,
 				37FF737D2435D219003FC067 /* Controllers */,
@@ -207,9 +207,9 @@
 				37FF73502434850A003FC067 /* Sources */,
 				37FF73512434850A003FC067 /* Frameworks */,
 				37FF73522434850A003FC067 /* Resources */,
-				37650DBD243B6A16006C794B /* Embed Frameworks */,
 				37A6DD3E243B5A0200DD8E79 /* Fix Frameworks */,
 				A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */,
+				375CDF6625A5ADA000C6843C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

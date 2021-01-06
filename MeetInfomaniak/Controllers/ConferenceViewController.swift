@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JitsiMeet
+import JitsiMeetSDK
 
 class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
 
