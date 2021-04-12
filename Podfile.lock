@@ -1,7 +1,7 @@
 PODS:
-  - MaterialComponents/AnimationTiming (112.0.1)
-  - MaterialComponents/Availability (112.0.1)
-  - MaterialComponents/Buttons (112.0.1):
+  - MaterialComponents/AnimationTiming (123.0.0)
+  - MaterialComponents/Availability (123.0.0)
+  - MaterialComponents/Buttons (123.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -13,35 +13,35 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/Elevation (112.0.1):
+  - MaterialComponents/Elevation (123.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Ink (112.0.1):
+  - MaterialComponents/Ink (123.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/Palettes (112.0.1)
-  - MaterialComponents/private/Application (112.0.1)
-  - MaterialComponents/private/Color (112.0.1):
+  - MaterialComponents/Palettes (123.0.0)
+  - MaterialComponents/private/Application (123.0.0)
+  - MaterialComponents/private/Color (123.0.0):
     - MaterialComponents/Availability
-  - MaterialComponents/private/Math (112.0.1)
-  - MaterialComponents/Ripple (112.0.1):
+  - MaterialComponents/private/Math (123.0.0)
+  - MaterialComponents/Ripple (123.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (112.0.1)
-  - MaterialComponents/ShadowLayer (112.0.1):
+  - MaterialComponents/ShadowElevations (123.0.0)
+  - MaterialComponents/ShadowLayer (123.0.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (112.0.1):
+  - MaterialComponents/ShapeLibrary (123.0.0):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (112.0.1):
+  - MaterialComponents/Shapes (123.0.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/TextFields (112.0.1):
+  - MaterialComponents/TextFields (123.0.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -49,15 +49,15 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/Typography (112.0.1):
+  - MaterialComponents/Typography (123.0.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
     - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
-  - MDFTextAccessibility (2.0.0)
+  - MDFTextAccessibility (2.0.1)
 
 DEPENDENCIES:
-  - MaterialComponents/TextFields
+  - MaterialComponents/TextFields (= 123.0.0)
 
 SPEC REPOS:
   trunk:
@@ -66,10 +66,10 @@ SPEC REPOS:
     - MDFTextAccessibility
 
 SPEC CHECKSUMS:
-  MaterialComponents: 5be6bf8c20183474a84c9852b5b45703ad49cf3a
+  MaterialComponents: 7a40e33dc8726359d12e667b74a4007d87e4abd4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
-  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
 
-PODFILE CHECKSUM: 022fb6f0d846d4e35037ffbef5774728889ffe01
+PODFILE CHECKSUM: c194c6a520d9b173d4166e36d7afdd3fdd22d0bc
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

@@ -2,7 +2,7 @@ platform :ios, '11.0'
 
 target 'MeetInfomaniak' do
   use_frameworks!
-  pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/TextFields', '123.0.0'
 end
 
 post_install do |installer| 

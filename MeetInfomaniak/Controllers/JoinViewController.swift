@@ -19,8 +19,8 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var roomLinkTextField: MDCTextField!
     @IBOutlet weak var joinMeetingButton: UIButton!
     @IBOutlet weak var contentView: UIView!
-    private var usernameFieldController: MDCTextInputControllerOutlined?
-    private var roomLinkFieldController: MDCTextInputControllerOutlined?
+    private var usernameFieldController: MDCTextInputControllerOutlined!
+    private var roomLinkFieldController: MDCTextInputControllerOutlined!
     private var infoButton: UIButton!
 
     private let roomCodeRegex = try! NSRegularExpression(pattern: #"^(\d{3}-\d{4}-\d{3}|\d{10})$"#)
@@ -41,27 +41,20 @@ class JoinViewController: UIViewController {
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationController?.navigationBar.shadowImage = UIImage()
         }
-        navigationController?.navigationBar.tintColor = UIColor(named: "infomaniakTint")
+        navigationController?.navigationBar.tintColor = Assets.infomaniakTintColor
 
         self.hideKeyboardWhenTappedAround()
         usernameFieldController = MDCTextInputControllerOutlined(textInput: usernameTextField)
-        usernameFieldController?.activeColor = UIColor(named: "infomaniakTint")
-        usernameFieldController?.inlinePlaceholderColor = UIColor(named: "outlineColor")
-        usernameFieldController?.floatingPlaceholderNormalColor = UIColor(named: "outlineColor")
-        usernameFieldController?.floatingPlaceholderActiveColor = UIColor(named: "infomaniakTint")
-        usernameTextField.textColor = UIColor(named: "textColor")
+        applyThemeTo(inputController: usernameFieldController!)
 
         roomLinkFieldController = MDCTextInputControllerOutlined(textInput: roomLinkTextField)
-        roomLinkFieldController?.activeColor = UIColor(named: "infomaniakTint")
-        roomLinkFieldController?.inlinePlaceholderColor = UIColor(named: "outlineColor")
-        roomLinkFieldController?.floatingPlaceholderNormalColor = UIColor(named: "outlineColor")
-        roomLinkFieldController?.floatingPlaceholderActiveColor = UIColor(named: "infomaniakTint")
-        roomLinkTextField.textColor = UIColor(named: "textColor")
+        applyThemeTo(inputController: roomLinkFieldController!)
+
         roomLinkTextField.trailingViewMode = .always
 
         infoButton = UIButton(type: .custom)
-        infoButton.setImage(UIImage(named: "ic_info"), for: .normal)
-        infoButton.tintColor = UIColor(named: "outlineColor")!
+        infoButton.setImage(Assets.infoIcon, for: .normal)
+        infoButton.tintColor = Assets.outlineColor
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
         roomLinkTextField.trailingView = infoButton
 
@@ -72,6 +65,14 @@ class JoinViewController: UIViewController {
         if roomId == nil {
             roomId = generateRoomId()
         }
+    }
+
+    private func applyThemeTo(inputController: MDCTextInputControllerOutlined) {
+        inputController.activeColor = Assets.infomaniakTintColor
+        inputController.inlinePlaceholderColor = Assets.outlineColor
+        inputController.floatingPlaceholderNormalColor = Assets.outlineColor
+        inputController.floatingPlaceholderActiveColor = Assets.infomaniakTintColor
+        inputController.textInput!.textColor = Assets.textColor
     }
 
     func showAlert(title: String, message: String) {
@@ -216,7 +217,7 @@ class JoinViewController: UIViewController {
             roomLinkFieldController?.setErrorText(nil, errorAccessibilityValue: nil)
         }
 
-        infoButton.tintColor = UIColor(named: "outlineColor")!
+        infoButton.tintColor = Assets.outlineColor
         infoButton.removeTarget(self, action: nil, for: .touchUpInside)
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
 

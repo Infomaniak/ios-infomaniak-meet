@@ -20,7 +20,7 @@ class InitialViewController: UIViewController {
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationController?.navigationBar.shadowImage = UIImage()
         }
-        navigationController?.navigationBar.tintColor = UIColor(named: "infomaniakTint")
+        navigationController?.navigationBar.tintColor = Assets.infomaniakTintColor
     }
 
     // MARK: - Navigation

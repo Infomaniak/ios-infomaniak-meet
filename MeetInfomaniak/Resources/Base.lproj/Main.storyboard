@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYs-ge-4Vf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYs-ge-4Vf">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,8 @@
                     <view key="view" contentMode="scaleToFill" id="qj9-WU-AkW" customClass="JitsiMeetView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YWc-co-IRw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="V7y-zj-qkk"/>
                 </viewController>
@@ -37,7 +38,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcV-9N-yeH">
                                 <rect key="frame" x="0.0" y="420" width="320" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-ty-Tqh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-ty-Tqh">
                                         <rect key="frame" x="16" y="82" width="288" height="50"/>
                                         <color key="backgroundColor" name="secondaryTint"/>
                                         <constraints>
@@ -56,7 +57,7 @@
                                             <segue destination="GJ1-26-seI" kind="show" identifier="joinMeetingSegue" id="awc-Fy-fYv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffu-TI-Iwb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffu-TI-Iwb">
                                         <rect key="frame" x="16" y="16" width="288" height="50"/>
                                         <color key="backgroundColor" name="infomaniakTint"/>
                                         <constraints>
@@ -100,6 +101,7 @@
                                 <rect key="frame" x="80" y="44" width="160" height="121"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GEK-An-e0b"/>
                         <color key="backgroundColor" name="rootViewBackground"/>
                         <constraints>
                             <constraint firstItem="Y0r-tb-67E" firstAttribute="top" secondItem="xGm-Gw-8V1" secondAttribute="top" constant="44" id="2Cw-d6-9AJ"/>
@@ -115,7 +117,6 @@
                             <constraint firstItem="CjN-Xm-MfC" firstAttribute="centerX" secondItem="xGm-Gw-8V1" secondAttribute="centerX" id="vJP-L4-F99"/>
                             <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="kcV-9N-yeH" secondAttribute="trailing" priority="750" id="xVm-pk-bc3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GEK-An-e0b"/>
                     </view>
                     <navigationItem key="navigationItem" id="xYc-AS-uZP">
                         <barButtonItem key="backBarButtonItem" title=" " id="DMh-dZ-EN3"/>
@@ -182,7 +183,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
                                                 <rect key="frame" x="0.0" y="116" width="288" height="50"/>
                                                 <color key="backgroundColor" name="infomaniakTint"/>
                                                 <constraints>
@@ -210,7 +211,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gXz-Nc-58G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mQ0-o9-ELb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gXz-Nc-58G" secondAttribute="top" constant="16" id="0Fi-b2-3z7"/>
                             <constraint firstItem="mQ0-o9-ELb" firstAttribute="centerX" secondItem="XaI-s9-5L9" secondAttribute="centerX" id="8EN-9b-FmB"/>
@@ -221,7 +223,6 @@
                             <constraint firstItem="mQ0-o9-ELb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gXz-Nc-58G" secondAttribute="leading" id="ke7-EU-lqo"/>
                             <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="T61-Dg-5QS" secondAttribute="trailing" priority="750" constant="16" id="l5x-Q8-uCB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gXz-Nc-58G"/>
                     </view>
                     <navigationItem key="navigationItem" id="Orm-aC-SY2">
                         <barButtonItem key="backBarButtonItem" title=" " id="h5l-ct-tLg"/>
@@ -266,5 +267,8 @@
         <namedColor name="textColor">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
