@@ -28,9 +28,13 @@
     "kab": "Cabil",
     "ko": "Corean",
     "lt": "Lituanian",
+    "ml": "Malaialam",
+    "lv": "Leton",
     "nl": "Neerlandés",
     "oc": "Occitan",
+    "fa": "Persa",    
     "pl": "Polonés",
+    "pt": "Portugués",    
     "ptBR": "Portugués (Brasil)",
     "ru": "Rus",
     "ro": "Romanian",
@@ -46,5 +50,3 @@
     "zhCN": "Chinés (China)",
     "zhTW": "Chinés (Taiwan)"
 }
-
-

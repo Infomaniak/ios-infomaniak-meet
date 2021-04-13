@@ -10,16 +10,18 @@ import Foundation
 
 class ApiFetcher {
     
-    public static func getRoomNameFromCode(_ code: String, completion: @escaping (ApiResponse<CodeRoomName>?, Error?) -> Void) {
-        let request = URLRequest(url: URL(string: "https://welcome.infomaniak.com/api/components/meet/conference/\(code)")!)
+    private static let baseApiUrl = "https://welcome.infomaniak.com/api/components/meet/conference/"
+    private static let session = URLSession.shared
 
-        let session = URLSession.shared
+    public static func getRoomNameFromCode(_ code: String, completion: @escaping (ApiResponse<CodeRoomName>?, Error?) -> Void) {
+        let request = URLRequest(url: URL(string: "\(baseApiUrl)\(code)")!)
+
         session.dataTask(with: request) { (data, response, sessionError) in
             if let response = response as? HTTPURLResponse {
                 if response.isSuccessful() && data != nil && data!.count > 0 {
                     do {
-                        let apiToken = try JSONDecoder().decode(ApiResponse<CodeRoomName>.self, from: data!)
-                        completion(apiToken, nil)
+                        let response = try JSONDecoder().decode(ApiResponse<CodeRoomName>.self, from: data!)
+                        completion(response, nil)
                     } catch {
                         completion(nil, error)
                     }
