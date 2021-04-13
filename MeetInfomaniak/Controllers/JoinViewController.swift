@@ -26,6 +26,7 @@ class JoinViewController: UIViewController {
     private let roomCodeRegex = try! NSRegularExpression(pattern: #"^(\d{3}-\d{4}-\d{3}|\d{10})$"#)
     private let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     private var roomId: String!
+    private var host: URL?
     private let username = UserDefaults.getUsername()
 
     var joinUrl: URL?
@@ -91,20 +92,23 @@ class JoinViewController: UIViewController {
     }
 
     private func fillRoomLinkWithUrl(_ url: URL) {
-        if let roomId = extractRoomIdFromUrl(url) {
+        if let result = extractHostAndRoomIdFromUrl(url) {
             roomLinkTextField.text = url.absoluteString
-            self.roomId = roomId
+            self.host = result.0
+            self.roomId = result.1
         }
     }
 
-    private func extractRoomIdFromUrl(_ url: URL) -> String? {
-        if url.absoluteString.starts(with: baseServerURL) || url.absoluteString.starts(with: "https://meet.infomaniak.com") {
-            if let hash = URLComponents(url: url, resolvingAgainstBaseURL: true)?.path.replacingOccurrences(of: "/", with: "") {
-                return hash.count > 0 ? hash : nil
-            }
-        } else if url.absoluteString.starts(with: "kmeet://") {
-            if let hash = URLComponents(url: url, resolvingAgainstBaseURL: true)?.url?.absoluteString.replacingOccurrences(of: "kmeet://", with: "") {
-                return hash.count > 0 ? hash : nil
+    private func extractHostAndRoomIdFromUrl(_ url: URL) -> (URL, String)? {
+        if let scheme = url.scheme,
+            url.lastPathComponent.count > 0 {
+            let hash = url.lastPathComponent
+
+            if scheme == "kmeet" {
+                return extractHostAndRoomIdFromUrl(URL(string: url.absoluteString.replacingOccurrences(of: "kmeet://", with: "https://"))!)
+            } else if let host = url.host,
+                scheme == "https" {
+                return (URL(string: scheme + "://" + host)!, hash)
             }
         }
         return nil
@@ -164,8 +168,9 @@ class JoinViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let conferenceViewController = segue.destination as? ConferenceViewController {
             UserDefaults.store(username: usernameTextField.text!)
-            conferenceViewController.roomName = roomId.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            conferenceViewController.roomName = roomId
             conferenceViewController.displayName = usernameTextField.text!
+            conferenceViewController.host = host
         }
     }
 
@@ -191,6 +196,11 @@ class JoinViewController: UIViewController {
                             self.infoButton.addTarget(self, action: #selector(JoinViewController.infoErrorButtonPressed), for: .touchUpInside)
                         } else {
                             self.roomId = response?.data.name
+                            if let host = response?.data.hostname {
+                                self.host = URL(string: "https://" + host)
+                            } else {
+                                self.host = URL(string: baseServerURL)!
+                            }
                             self.performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
                         }
                         self.joinMeetingButton.setLoading(false)
@@ -221,7 +231,12 @@ class JoinViewController: UIViewController {
         infoButton.removeTarget(self, action: nil, for: .touchUpInside)
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
 
-        roomId = sender.text
+        if let possibleUrl = sender.text,
+            URL(string: possibleUrl) != nil {
+            roomId = sender.text
+        } else {
+            roomId = sender.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        }
     }
 
 // MARK: - Keyboard management

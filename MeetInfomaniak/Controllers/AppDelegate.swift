@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         let joinViewController = JoinViewController.instantiate()
         joinViewController.joining = true
-        joinViewController.joinUrl = url
+        joinViewController.joinUrl = URL(string: url.absoluteString.replacingOccurrences(of: "kmeet://", with: "https://"))
         navigationController.setViewControllers([InitialViewController.instantiate(), joinViewController], animated: false)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

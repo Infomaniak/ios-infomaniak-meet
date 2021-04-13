@@ -13,6 +13,7 @@ class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
 
     var displayName: String!
     var roomName: String!
+    var host: URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
         jitsiView.delegate = self
         let options = JitsiMeetConferenceOptions.fromBuilder { (builder) in
             builder.room = self.roomName
+            builder.serverURL = self.host
             builder.userInfo = JitsiMeetUserInfo(displayName: self.displayName, andEmail: nil, andAvatar: nil)
         }
         jitsiView.join(options)

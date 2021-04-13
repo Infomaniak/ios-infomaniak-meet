@@ -11,4 +11,5 @@ import Foundation
 class CodeRoomName: Codable {
     let name: String
     let code: String
+    let hostname: String
 }
