@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
             builder.serverURL = URL(string: baseServerURL)
+            builder.videoMuted = true
+            builder.welcomePageEnabled = false
             builder.setFeatureFlag("recording.enabled", withBoolean: false)
             builder.setFeatureFlag("video-share.enabled", withBoolean: false)
             builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
