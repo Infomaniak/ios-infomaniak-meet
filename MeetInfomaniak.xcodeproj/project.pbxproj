@@ -3,15 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
-		371A3EC82625E82100804F78 /* JitsiMeetSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A3EC42625E81300804F78 /* JitsiMeetSDK.xcframework */; };
-		371A3EC92625E82100804F78 /* JitsiMeetSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 371A3EC42625E81300804F78 /* JitsiMeetSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		371A3ECA2625E82100804F78 /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A3EC52625E81300804F78 /* WebRTC.xcframework */; };
-		371A3ECB2625E82100804F78 /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 371A3EC52625E81300804F78 /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
@@ -31,25 +27,8 @@
 		37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		375CDF6625A5ADA000C6843C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				371A3ECB2625E82100804F78 /* WebRTC.xcframework in Embed Frameworks */,
-				371A3EC92625E82100804F78 /* JitsiMeetSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
-		371A3EC42625E81300804F78 /* JitsiMeetSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JitsiMeetSDK.xcframework; sourceTree = "<group>"; };
-		371A3EC52625E81300804F78 /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WebRTC.xcframework; sourceTree = "<group>"; };
 		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -88,23 +67,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */,
-				371A3EC82625E82100804F78 /* JitsiMeetSDK.xcframework in Frameworks */,
-				371A3ECA2625E82100804F78 /* WebRTC.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37083EF525A5AB1B00163D24 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				371A3EC42625E81300804F78 /* JitsiMeetSDK.xcframework */,
-				371A3EC52625E81300804F78 /* WebRTC.xcframework */,
-			);
-			path = Frameworks;
-			sourceTree = SOURCE_ROOT;
-		};
 		37F3114924E270A0005E370E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +104,6 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
-				37083EF525A5AB1B00163D24 /* Frameworks */,
 				37FF73782435CC8D003FC067 /* Extensions */,
 				37FF736E2435CB41003FC067 /* Resources */,
 				37FF737D2435D219003FC067 /* Controllers */,
@@ -210,9 +177,7 @@
 				37FF73502434850A003FC067 /* Sources */,
 				37FF73512434850A003FC067 /* Frameworks */,
 				37FF73522434850A003FC067 /* Resources */,
-				37A6DD3E243B5A0200DD8E79 /* Fix Frameworks */,
 				A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */,
-				375CDF6625A5ADA000C6843C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Philippe Weidmann";
 				TargetAttributes = {
 					37FF73532434850A003FC067 = {
@@ -276,24 +241,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37A6DD3E243B5A0200DD8E79 /* Fix Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Fix Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\n# This script gets executed from Xcode to fixup the embedded frameworks and\n# bundle the necessary architectures.\n\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        if lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\" | grep -q -v \"^Non-fat\"\n        then\n            echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n            lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n            EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n        fi\n    done\n\n    if [ -n \"$EXTRACTED_ARCHS\" ]\n    then\n        echo \"Merging extracted architectures: ${ARCHS}\"\n        lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n        rm \"${EXTRACTED_ARCHS[@]}\"\n\n        echo \"Replacing original executable with thinned version\"\n        rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n        mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n    fi\ndone\n";
-		};
 		A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +375,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -489,6 +437,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -527,16 +476,14 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet;
 				PRODUCT_NAME = kMeet;
 				SWIFT_VERSION = 5.0;
@@ -554,16 +501,14 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet;
 				PRODUCT_NAME = kMeet;
 				SWIFT_VERSION = 5.0;

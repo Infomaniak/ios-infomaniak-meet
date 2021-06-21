@@ -1,4 +1,5 @@
 PODS:
+  - JitsiMeetSDK (3.6.0)
   - MaterialComponents/AnimationTiming (123.0.0)
   - MaterialComponents/Availability (123.0.0)
   - MaterialComponents/Buttons (123.0.0):
@@ -57,19 +58,22 @@ PODS:
   - MDFTextAccessibility (2.0.1)
 
 DEPENDENCIES:
+  - JitsiMeetSDK
   - MaterialComponents/TextFields (= 123.0.0)
 
 SPEC REPOS:
   trunk:
+    - JitsiMeetSDK
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
 
 SPEC CHECKSUMS:
+  JitsiMeetSDK: 476329f72a866f714d2802bafe1729de6d644ccf
   MaterialComponents: 7a40e33dc8726359d12e667b74a4007d87e4abd4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
 
-PODFILE CHECKSUM: c194c6a520d9b173d4166e36d7afdd3fdd22d0bc
+PODFILE CHECKSUM: d041c4041b42ae8a57b20b4926515f83bd4432f3
 
 COCOAPODS: 1.10.1
