@@ -10,7 +10,7 @@ import Foundation
 
 class ApiFetcher {
     
-    private static let baseApiUrl = "https://welcome.infomaniak.com/api/components/meet/conference/"
+    private static let baseApiUrl = "https://welcome.infomaniak.com/api/components/meet/conference/code/"
     private static let session = URLSession.shared
 
     public static func getRoomNameFromCode(_ code: String, completion: @escaping (ApiResponse<CodeRoomName>?, Error?) -> Void) {
