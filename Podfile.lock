@@ -1,5 +1,19 @@
 PODS:
-  - JitsiMeetSDK (4.1.0)
+  - Giphy (2.1.20):
+    - libwebp
+  - JitsiMeetSDK (5.1.1):
+    - Giphy (= 2.1.20)
+    - JitsiWebRTC (= 100.0.0)
+  - JitsiWebRTC (100.0.0)
+  - libwebp (1.2.3):
+    - libwebp/demux (= 1.2.3)
+    - libwebp/mux (= 1.2.3)
+    - libwebp/webp (= 1.2.3)
+  - libwebp/demux (1.2.3):
+    - libwebp/webp
+  - libwebp/mux (1.2.3):
+    - libwebp/demux
+  - libwebp/webp (1.2.3)
   - MaterialComponents/AnimationTiming (123.0.0)
   - MaterialComponents/Availability (123.0.0)
   - MaterialComponents/Buttons (123.0.0):
@@ -58,22 +72,28 @@ PODS:
   - MDFTextAccessibility (2.0.1)
 
 DEPENDENCIES:
-  - JitsiMeetSDK
+  - JitsiMeetSDK (= 5.1.1)
   - MaterialComponents/TextFields (= 123.0.0)
 
 SPEC REPOS:
   trunk:
+    - Giphy
     - JitsiMeetSDK
+    - JitsiWebRTC
+    - libwebp
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
 
 SPEC CHECKSUMS:
-  JitsiMeetSDK: 0716f9a49278330a57d8b28304f78c25ae5ab963
+  Giphy: b6d5087521d251bb8c99cdc0eb07bbdf86d142d5
+  JitsiMeetSDK: 1e9ebbad89912e271b781be0dd72ef94b33d0c47
+  JitsiWebRTC: 873becc5a3edd1adebe86303ee5d36aab4f7fcc3
+  libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
   MaterialComponents: 7a40e33dc8726359d12e667b74a4007d87e4abd4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
 
-PODFILE CHECKSUM: 86b8c079876c7762d86b4103e50c217ae6193a01
+PODFILE CHECKSUM: e06700192faf7d88dce67e056348c4dd53dd6b9d
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
