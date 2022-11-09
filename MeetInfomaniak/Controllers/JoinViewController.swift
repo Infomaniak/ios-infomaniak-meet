@@ -146,6 +146,19 @@ class JoinViewController: UIViewController {
                     }
                 }
             }
+            
+            // If user already has a username in the link, he is probably coming from kChat, directly join
+            if var urlComponents = URLComponents(string: roomLinkTextField.text ?? ""),
+               let username = urlComponents.queryItems?.first(where: { $0.name == "username" })?.value,
+               !username.isEmpty {
+                // Remove username from current link to prevent join loop
+                urlComponents.queryItems?.removeAll()
+                joinUrl = urlComponents.url!
+                
+                usernameTextField.text = username
+                performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+            }
+            
         } else {
             joinMeetingButton.setTitle("createButton".localized, for: .normal)
             joinMeetingButton.setTitle("createButton".localized, for: .disabled)
