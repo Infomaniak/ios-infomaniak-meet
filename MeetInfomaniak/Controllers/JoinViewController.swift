@@ -152,7 +152,7 @@ class JoinViewController: UIViewController {
                let username = urlComponents.queryItems?.first(where: { $0.name == "username" })?.value,
                !username.isEmpty {
                 // Remove username from current link to prevent join loop
-                urlComponents.queryItems?.removeAll()
+                urlComponents.queryItems = nil
                 joinUrl = urlComponents.url!
                 
                 usernameTextField.text = username
