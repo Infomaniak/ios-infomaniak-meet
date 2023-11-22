@@ -10,19 +10,19 @@ import UIKit
 
 extension UIButton {
     func setLoading(_ loading: Bool) {
-        self.isEnabled = !loading
+        isEnabled = !loading
         if loading {
-            self.setTitle("", for: .disabled)
+            setTitle("", for: .disabled)
             let loadingSpinner = UIActivityIndicatorView(style: .white)
             loadingSpinner.startAnimating()
             loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
             loadingSpinner.hidesWhenStopped = true
-            self.addSubview(loadingSpinner)
-            loadingSpinner.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            loadingSpinner.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            addSubview(loadingSpinner)
+            loadingSpinner.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+            loadingSpinner.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         } else {
-            self.setTitle(self.title(for: .normal), for: .disabled)
-            for view in self.subviews {
+            setTitle(title(for: .normal), for: .disabled)
+            for view in subviews {
                 if view.isKind(of: UIActivityIndicatorView.self) {
                     view.removeFromSuperview()
                 }

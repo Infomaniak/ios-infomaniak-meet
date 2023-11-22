@@ -23,6 +23,7 @@
 import UIKit
 
 // MARK: Localizable
+
 public protocol Localizable {
     var localized: String { get }
 }
@@ -34,6 +35,7 @@ extension String: Localizable {
 }
 
 // MARK: XIBLocalizable
+
 public protocol XIBLocalizable {
     var xibLocKey: String? { get set }
 }
@@ -92,6 +94,7 @@ extension UIBarItem: XIBLocalizable { // Localizes UIBarButtonItem and UITabBarI
 }
 
 // MARK: Special protocol to localize multiple texts in the same control
+
 public protocol XIBMultiLocalizable {
     var xibLocKeys: String? { get set }
 }
@@ -113,6 +116,7 @@ extension UISegmentedControl: XIBMultiLocalizable {
 }
 
 // MARK: Special protocol to localizaze UITextField's placeholder
+
 public protocol UITextFieldXIBLocalizable {
     var xibPlaceholderLocKey: String? { get set }
 }

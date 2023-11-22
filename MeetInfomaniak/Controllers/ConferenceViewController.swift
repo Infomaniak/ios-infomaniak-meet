@@ -6,11 +6,10 @@
 //  Copyright © 2020 Philippe Weidmann. All rights reserved.
 //
 
-import UIKit
 import JitsiMeetSDK
+import UIKit
 
 class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
-
     var displayName: String!
     var roomName: String!
     var host: URL!
@@ -20,9 +19,9 @@ class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
 
         navigationItem.hidesBackButton = true
 
-        let jitsiView = self.view as! JitsiMeetView
+        let jitsiView = view as! JitsiMeetView
         jitsiView.delegate = self
-        let options = JitsiMeetConferenceOptions.fromBuilder { (builder) in
+        let options = JitsiMeetConferenceOptions.fromBuilder { builder in
             builder.room = self.roomName
             builder.serverURL = self.host
             builder.userInfo = JitsiMeetUserInfo(displayName: self.displayName, andEmail: nil, andAvatar: nil)
@@ -33,5 +32,4 @@ class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
     func conferenceTerminated(_ data: [AnyHashable: Any]!) {
         navigationController?.popViewController(animated: true)
     }
-
 }

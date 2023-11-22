@@ -6,11 +6,10 @@
 //  Copyright © 2020 Philippe Weidmann. All rights reserved.
 //
 
-import UIKit
 import MaterialComponents.MaterialTextFields
+import UIKit
 
 class JoinViewController: UIViewController {
-
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet var centerConstraint: NSLayoutConstraint!
@@ -44,7 +43,7 @@ class JoinViewController: UIViewController {
         }
         navigationController?.navigationBar.tintColor = Assets.infomaniakTintColor
 
-        self.hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAround()
         usernameFieldController = MDCTextInputControllerOutlined(textInput: usernameTextField)
         applyThemeTo(inputController: usernameFieldController!)
 
@@ -94,20 +93,23 @@ class JoinViewController: UIViewController {
     private func fillRoomLinkWithUrl(_ url: URL) {
         if let result = extractHostAndRoomIdFromUrl(url) {
             roomLinkTextField.text = url.absoluteString
-            self.host = result.0
-            self.roomId = result.1
+            host = result.0
+            roomId = result.1
         }
     }
 
     private func extractHostAndRoomIdFromUrl(_ url: URL) -> (URL, String)? {
         if let scheme = url.scheme,
-            url.lastPathComponent.count > 0 {
+           url.lastPathComponent.count > 0 {
             let hash = url.lastPathComponent
 
             if scheme == "kmeet" {
-                return extractHostAndRoomIdFromUrl(URL(string: url.absoluteString.replacingOccurrences(of: "kmeet://", with: "https://"))!)
+                return extractHostAndRoomIdFromUrl(URL(string: url.absoluteString.replacingOccurrences(
+                    of: "kmeet://",
+                    with: "https://"
+                ))!)
             } else if let host = url.host,
-                scheme == "https" {
+                      scheme == "https" {
                 return (URL(string: scheme + "://" + host)!, hash)
             }
         }
@@ -115,7 +117,7 @@ class JoinViewController: UIViewController {
     }
 
     private func generateRoomId() -> String {
-        return String((0..<16).map { _ in hashCharList.randomElement()! })
+        return String((0 ..< 16).map { _ in hashCharList.randomElement()! })
     }
 
     func canStartMeeting() -> Bool {
@@ -128,7 +130,12 @@ class JoinViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(JoinViewController.keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(JoinViewController.keyboardWillChange(notification:)),
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil
+        )
         if joining {
             if let url = joinUrl {
                 fillRoomLinkWithUrl(url)
@@ -138,7 +145,11 @@ class JoinViewController: UIViewController {
                 }
             } else if UIPasteboard.general.hasStrings {
                 if let possibleRoomLink = UIPasteboard.general.string {
-                    if possibleRoomLink.count == 16 || roomCodeRegex.matches(in: possibleRoomLink, options: [], range: NSRange(location: 0, length: possibleRoomLink.utf16.count)).count > 0 {
+                    if possibleRoomLink.count == 16 || roomCodeRegex.matches(
+                        in: possibleRoomLink,
+                        options: [],
+                        range: NSRange(location: 0, length: possibleRoomLink.utf16.count)
+                    ).count > 0 {
                         roomLinkTextField.text = possibleRoomLink
                         roomId = possibleRoomLink
                     } else if let url = URL(string: possibleRoomLink) {
@@ -146,7 +157,7 @@ class JoinViewController: UIViewController {
                     }
                 }
             }
-            
+
             // If user already has a username in the link, he is probably coming from kChat, directly join
             if var urlComponents = URLComponents(string: roomLinkTextField.text ?? ""),
                let username = urlComponents.queryItems?.first(where: { $0.name == "username" })?.value,
@@ -154,11 +165,11 @@ class JoinViewController: UIViewController {
                 // Remove username from current link to prevent join loop
                 urlComponents.queryItems = nil
                 joinUrl = urlComponents.url!
-                
+
                 usernameTextField.text = username
                 performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
             }
-            
+
         } else {
             joinMeetingButton.setTitle("createButton".localized, for: .normal)
             joinMeetingButton.setTitle("createButton".localized, for: .disabled)
@@ -190,7 +201,10 @@ class JoinViewController: UIViewController {
     @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
         joinMeetingButton.setLoading(true)
         if usernameTextField.text!.count < 2 {
-            usernameFieldController?.setErrorText("mandatoryUserName".localized, errorAccessibilityValue: "mandatoryUserName".localized)
+            usernameFieldController?.setErrorText(
+                "mandatoryUserName".localized,
+                errorAccessibilityValue: "mandatoryUserName".localized
+            )
         }
 
         let roomText = roomLinkTextField.text!
@@ -199,14 +213,22 @@ class JoinViewController: UIViewController {
         }
 
         if canStartMeeting() {
-            if roomCodeRegex.matches(in: roomText, options: [], range: NSRange(location: 0, length: roomText.utf16.count)).count > 0 {
-                ApiFetcher.getRoomNameFromCode(roomText.replacingOccurrences(of: "-", with: "")) { (response, error) in
+            if roomCodeRegex.matches(in: roomText, options: [], range: NSRange(location: 0, length: roomText.utf16.count))
+                .count > 0 {
+                ApiFetcher.getRoomNameFromCode(roomText.replacingOccurrences(of: "-", with: "")) { response, error in
                     DispatchQueue.main.async {
                         if error != nil {
-                            self.roomLinkFieldController?.setErrorText("", errorAccessibilityValue: "codeDoesntExistError".localized)
+                            self.roomLinkFieldController?.setErrorText(
+                                "",
+                                errorAccessibilityValue: "codeDoesntExistError".localized
+                            )
                             self.infoButton.tintColor = self.roomLinkFieldController?.errorColor
                             self.infoButton.removeTarget(self, action: nil, for: .touchUpInside)
-                            self.infoButton.addTarget(self, action: #selector(JoinViewController.infoErrorButtonPressed), for: .touchUpInside)
+                            self.infoButton.addTarget(
+                                self,
+                                action: #selector(JoinViewController.infoErrorButtonPressed),
+                                for: .touchUpInside
+                            )
                         } else {
                             self.roomId = response?.data.name
                             if let host = response?.data.hostname {
@@ -226,7 +248,6 @@ class JoinViewController: UIViewController {
         } else {
             joinMeetingButton.setLoading(false)
         }
-
     }
 
     @IBAction func usenameChanged(_ sender: UITextField) {
@@ -245,22 +266,27 @@ class JoinViewController: UIViewController {
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
 
         if let possibleUrl = sender.text,
-            URL(string: possibleUrl) != nil {
+           URL(string: possibleUrl) != nil {
             roomId = sender.text
         } else {
             roomId = sender.text?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         }
     }
 
-// MARK: - Keyboard management
+    // MARK: - Keyboard management
+
     @objc func keyboardWillChange(notification: Notification) {
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
         let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
 
-        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
-                if (curFrame.origin.y > targetFrame.origin.y) {
+        UIView.animateKeyframes(
+            withDuration: duration,
+            delay: 0.0,
+            options: UIView.KeyframeAnimationOptions(rawValue: curve),
+            animations: {
+                if curFrame.origin.y > targetFrame.origin.y {
                     self.topConstraint.constant = -targetFrame.height
                     self.centerConstraint.isActive = false
                     self.bottomConstraint.constant = targetFrame.height
@@ -270,11 +296,13 @@ class JoinViewController: UIViewController {
                     self.bottomConstraint.constant = 16
                 }
                 self.view.layoutIfNeeded()
-            }, completion: nil)
+            },
+            completion: nil
+        )
     }
 
     class func instantiate() -> JoinViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JoinViewController") as! JoinViewController
+        return UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "JoinViewController") as! JoinViewController
     }
-
 }

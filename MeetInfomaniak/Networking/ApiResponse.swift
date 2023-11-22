@@ -13,9 +13,7 @@ enum ApiResult: String, Codable {
     case error
 }
 
-class ApiResponse<ResponseContent : Codable>: Codable {
-
+class ApiResponse<ResponseContent: Codable>: Codable {
     let result: ApiResult
     let data: ResponseContent
-
 }

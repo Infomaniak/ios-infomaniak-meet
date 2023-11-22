@@ -6,14 +6,14 @@
 //  Copyright © 2020 Philippe Weidmann. All rights reserved.
 //
 
-import UIKit
 import JitsiMeetSDK
+import UIKit
+
 /* strip bitcode before pusing: xcrun bitcode_strip -r WebRTC.framework/WebRTC -o WebRTC.framework/WebRTC*/
 
 let baseServerURL = "https://kmeet.infomaniak.com"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -21,8 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController?.endAppearanceTransition()
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { (builder) in
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { builder in
             builder.serverURL = URL(string: baseServerURL)
             builder.setVideoMuted(true)
             builder.setFeatureFlag("welcomepage.enable", withBoolean: false)
@@ -32,13 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         JitsiMeet.sharedInstance().defaultConferenceOptions = jitisiOptions
 
-
         window?.rootViewController = UINavigationController(rootViewController: InitialViewController.instantiate())
         window?.makeKeyAndVisible()
         return true
     }
 
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(
+        _ application: UIApplication,
+        willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ) -> Bool {
         return true
     }
 
@@ -47,7 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    func application(
+        _ application: UIApplication,
+        continue userActivity: NSUserActivity,
+        restorationHandler: ([UIUserActivityRestoring]?) -> Void
+    ) -> Bool {
         if let url = userActivity.webpageURL {
             launchFromLink(url: url)
         }
@@ -60,8 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         joinViewController.joining = true
         joinViewController.joinUrl = URL(string: url.absoluteString.replacingOccurrences(of: "kmeet://", with: "https://"))
         navigationController.setViewControllers([InitialViewController.instantiate(), joinViewController], animated: false)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
-
 }

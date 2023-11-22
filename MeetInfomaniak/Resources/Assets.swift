@@ -8,11 +8,9 @@
 
 import UIKit
 
-class Assets {
-    
+enum Assets {
     static let infomaniakTintColor = UIColor(named: "infomaniakTint")!
     static let textColor = UIColor(named: "textColor")!
     static let outlineColor = UIColor(named: "outlineColor")!
     static let infoIcon = UIImage(named: "ic_info")!
-    private init() {}
 }

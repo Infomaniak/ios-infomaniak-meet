@@ -9,14 +9,13 @@
 import Foundation
 
 class ApiFetcher {
-    
     private static let baseApiUrl = "https://welcome.infomaniak.com/api/components/meet/conference/code/"
     private static let session = URLSession.shared
 
     public static func getRoomNameFromCode(_ code: String, completion: @escaping (ApiResponse<CodeRoomName>?, Error?) -> Void) {
         let request = URLRequest(url: URL(string: "\(baseApiUrl)\(code)")!)
 
-        session.dataTask(with: request) { (data, response, sessionError) in
+        session.dataTask(with: request) { data, response, sessionError in
             if let response = response as? HTTPURLResponse {
                 if response.isSuccessful() && data != nil && data!.count > 0 {
                     do {
@@ -48,8 +47,8 @@ extension Dictionary {
             let escapedValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlQueryValueAllowed) ?? ""
             return escapedKey + "=" + escapedValue
         }
-                .joined(separator: "&")
-                .data(using: .utf8)
+        .joined(separator: "&")
+        .data(using: .utf8)
     }
 }
 
