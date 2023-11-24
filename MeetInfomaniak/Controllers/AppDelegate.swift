@@ -9,8 +9,6 @@
 import JitsiMeetSDK
 import UIKit
 
-/* strip bitcode before pusing: xcrun bitcode_strip -r WebRTC.framework/WebRTC -o WebRTC.framework/WebRTC*/
-
 let baseServerURL = "https://kmeet.infomaniak.com"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let jitisiOptions = JitsiMeetConferenceOptions.fromBuilder { builder in
             builder.serverURL = URL(string: baseServerURL)
             builder.setVideoMuted(true)
+
+            builder.setFeatureFlag("prejoinpage.enabled", withBoolean: false)
+            builder.setFeatureFlag("settings.enabled", withBoolean: false)
+            builder.setFeatureFlag("unsaferoomwarning.enabled", withBoolean: false)
             builder.setFeatureFlag("welcomepage.enable", withBoolean: false)
             builder.setFeatureFlag("recording.enabled", withBoolean: false)
             builder.setFeatureFlag("video-share.enabled", withBoolean: false)
