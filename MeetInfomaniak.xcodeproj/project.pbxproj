@@ -10,6 +10,25 @@
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
 		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
+		378305732C088CEA008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378305722C088CEA008D25E4 /* Assets.xcassets */; };
+		3783057C2C088CEA008D25E4 /* MeetInfomaniakAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
+		378305812C088DBA008D25E4 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
+		378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
+		378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF736B24348E13003FC067 /* ConferenceViewController.swift */; };
+		378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
+		378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115224E281B8005E370E /* UIButton+Extension.swift */; };
+		378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
+		378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115024E2795D005E370E /* ApiFetcher.swift */; };
+		378305882C088DBA008D25E4 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
+		378305892C088DBA008D25E4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
+		3783058A2C088DBA008D25E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
+		3783058B2C088DBA008D25E4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
+		3783058C2C088DD1008D25E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
+		3783058D2C088DD7008D25E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73622434850C003FC067 /* LaunchScreen.storyboard */; };
+		3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
+		3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
+		378305912C088DF0008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
 		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
 		37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
 		37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
@@ -25,12 +44,42 @@
 		37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
 		37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
 		37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
+		E79CDC513B54D5A9ABE9C7DF /* Pods_MeetInfomaniakAppClip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		378305792C088CEA008D25E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FF734C2434850A003FC067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 378305662C088CE8008D25E4;
+			remoteInfo = MeetInfomaniakAppClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3783057B2C088CEA008D25E4 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				3783057C2C088CEA008D25E4 /* MeetInfomaniakAppClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniakAppClip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetInfomaniakAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		378305722C088CEA008D25E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		378305772C088CEA008D25E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378305782C088CEA008D25E4 /* MeetInfomaniakAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetInfomaniakAppClip.entitlements; sourceTree = "<group>"; };
 		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		37F3114A24E270B8005E370E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		37F3114E24E2730D005E370E /* CodeRoomName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRoomName.swift; sourceTree = "<group>"; };
@@ -57,11 +106,21 @@
 		37FF738D2435DB2A003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37FF738E2435DB2B003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37FF738F2435DB2B003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F7DDC2D6134818B942F8C6E /* Pods-MeetInfomaniakAppClip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniakAppClip.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip.debug.xcconfig"; sourceTree = "<group>"; };
 		7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA01ED631BD6578365D61E9 /* Pods-MeetInfomaniakAppClip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniakAppClip.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip.release.xcconfig"; sourceTree = "<group>"; };
 		9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		378305642C088CE8008D25E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E79CDC513B54D5A9ABE9C7DF /* Pods_MeetInfomaniakAppClip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37FF73512434850A003FC067 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378305682C088CE8008D25E4 /* MeetInfomaniakAppClip */ = {
+			isa = PBXGroup;
+			children = (
+				378305722C088CEA008D25E4 /* Assets.xcassets */,
+				378305772C088CEA008D25E4 /* Info.plist */,
+				378305782C088CEA008D25E4 /* MeetInfomaniakAppClip.entitlements */,
+			);
+			path = MeetInfomaniakAppClip;
+			sourceTree = "<group>";
+		};
 		37F3114924E270A0005E370E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				37FF73562434850A003FC067 /* MeetInfomaniak */,
+				378305682C088CE8008D25E4 /* MeetInfomaniakAppClip */,
 				37FF73552434850A003FC067 /* Products */,
 				DA37EEDD0FD9C2AA9DC0578C /* Pods */,
 				B0016E280F08D39872DF0A2D /* Frameworks */,
@@ -97,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				37FF73542434850A003FC067 /* kMeet.app */,
+				378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */,
+				04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +234,8 @@
 			children = (
 				17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */,
 				9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */,
+				3F7DDC2D6134818B942F8C6E /* Pods-MeetInfomaniakAppClip.debug.xcconfig */,
+				7FA01ED631BD6578365D61E9 /* Pods-MeetInfomaniakAppClip.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -169,6 +243,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		378305662C088CE8008D25E4 /* MeetInfomaniakAppClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3783057D2C088CEA008D25E4 /* Build configuration list for PBXNativeTarget "MeetInfomaniakAppClip" */;
+			buildPhases = (
+				5DFEBCD394E37DCA51E9126B /* [CP] Check Pods Manifest.lock */,
+				378305632C088CE8008D25E4 /* Sources */,
+				378305642C088CE8008D25E4 /* Frameworks */,
+				378305652C088CE8008D25E4 /* Resources */,
+				CAE15627865AB39863ED226C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetInfomaniakAppClip;
+			productName = MeetInfomaniakAppClip;
+			productReference = 378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
 		37FF73532434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37FF73682434850C003FC067 /* Build configuration list for PBXNativeTarget "MeetInfomaniak" */;
@@ -179,10 +272,12 @@
 				37FF73522434850A003FC067 /* Resources */,
 				A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */,
 				378305622C087F8C008D25E4 /* ShellScript */,
+				3783057B2C088CEA008D25E4 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3783057A2C088CEA008D25E4 /* PBXTargetDependency */,
 			);
 			name = MeetInfomaniak;
 			productName = MeetInfomaniak;
@@ -195,10 +290,13 @@
 		37FF734C2434850A003FC067 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Philippe Weidmann";
 				TargetAttributes = {
+					378305662C088CE8008D25E4 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					37FF73532434850A003FC067 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -222,11 +320,25 @@
 			projectRoot = "";
 			targets = (
 				37FF73532434850A003FC067 /* MeetInfomaniak */,
+				378305662C088CE8008D25E4 /* MeetInfomaniakAppClip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		378305652C088CE8008D25E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */,
+				3783058D2C088DD7008D25E4 /* LaunchScreen.storyboard in Resources */,
+				3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */,
+				378305732C088CEA008D25E4 /* Assets.xcassets in Resources */,
+				378305912C088DF0008D25E4 /* Assets.xcassets in Resources */,
+				3783058C2C088DD1008D25E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37FF73522434850A003FC067 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +371,28 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nset -e\n\n# if [ \"Release\" = \"${CONFIGURATION}\" ]; then # Only do this for release builds\n    \n    # Path to the app directory\n    APP_DIR_PATH=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\"\n    # Strip main binary\n    strip -rSTx \"${APP_DIR_PATH}/${EXECUTABLE_NAME}\"\n    # Path to the Frameworks directory\n    APP_FRAMEWORKS_DIR=\"${APP_DIR_PATH}/Frameworks\"\n    \n    # Strip symbols from frameworks, if Frameworks/ exists at all\n    # ... as long as the framework is NOT signed by Apple\n    if [ -d \"${APP_FRAMEWORKS_DIR}\" ]\n    then\n        find \"${APP_FRAMEWORKS_DIR}\" -type f -perm +111 -maxdepth 2 -mindepth 2 -exec bash -c 'codesign -v -R=\"anchor apple\" \"{}\" &> /dev/null || (echo \"{}\" && strip -rSTx \"{}\")' \\;\n    fi\n# fi\n";
 		};
+		5DFEBCD394E37DCA51E9126B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetInfomaniakAppClip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A55604E66149B452EDE168F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +408,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE15627865AB39863ED226C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA73A747CB19ADE01C56FCFA /* [CP] Check Pods Manifest.lock */ = {
@@ -301,6 +452,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		378305632C088CE8008D25E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */,
+				378305812C088DBA008D25E4 /* Assets.swift in Sources */,
+				378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */,
+				378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */,
+				378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */,
+				378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */,
+				378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */,
+				378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */,
+				378305882C088DBA008D25E4 /* Localizable.swift in Sources */,
+				378305892C088DBA008D25E4 /* InitialViewController.swift in Sources */,
+				3783058A2C088DBA008D25E4 /* AppDelegate.swift in Sources */,
+				3783058B2C088DBA008D25E4 /* UIViewController+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37FF73502434850A003FC067 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +491,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3783057A2C088CEA008D25E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 378305662C088CE8008D25E4 /* MeetInfomaniakAppClip */;
+			targetProxy = 378305792C088CEA008D25E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37FF735D2434850A003FC067 /* Main.storyboard */ = {
@@ -366,6 +544,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3783057E2C088CEA008D25E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F7DDC2D6134818B942F8C6E /* Pods-MeetInfomaniakAppClip.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MeetInfomaniakAppClip/MeetInfomaniakAppClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 864VDCS2QY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeetInfomaniakAppClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = kMeet;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3783057F2C088CEA008D25E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA01ED631BD6578365D61E9 /* Pods-MeetInfomaniakAppClip.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MeetInfomaniakAppClip/MeetInfomaniakAppClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 864VDCS2QY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeetInfomaniakAppClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = kMeet;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		37FF73662434850C003FC067 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -488,12 +741,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -513,12 +768,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeetInfomaniak/Resources/MeetInfomaniak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 864VDCS2QY;
 				ENABLE_BITCODE = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MeetInfomaniak/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -537,6 +794,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3783057D2C088CEA008D25E4 /* Build configuration list for PBXNativeTarget "MeetInfomaniakAppClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3783057E2C088CEA008D25E4 /* Debug */,
+				3783057F2C088CEA008D25E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37FF734F2434850A003FC067 /* Build configuration list for PBXProject "MeetInfomaniak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
