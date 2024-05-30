@@ -252,6 +252,7 @@
 				378305642C088CE8008D25E4 /* Frameworks */,
 				378305652C088CE8008D25E4 /* Resources */,
 				CAE15627865AB39863ED226C /* [CP] Embed Pods Frameworks */,
+				378305922C0891C0008D25E4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -355,6 +356,23 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		378305622C087F8C008D25E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nset -e\n\n# if [ \"Release\" = \"${CONFIGURATION}\" ]; then # Only do this for release builds\n    \n    # Path to the app directory\n    APP_DIR_PATH=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\"\n    # Strip main binary\n    strip -rSTx \"${APP_DIR_PATH}/${EXECUTABLE_NAME}\"\n    # Path to the Frameworks directory\n    APP_FRAMEWORKS_DIR=\"${APP_DIR_PATH}/Frameworks\"\n    \n    # Strip symbols from frameworks, if Frameworks/ exists at all\n    # ... as long as the framework is NOT signed by Apple\n    if [ -d \"${APP_FRAMEWORKS_DIR}\" ]\n    then\n        find \"${APP_FRAMEWORKS_DIR}\" -type f -perm +111 -maxdepth 2 -mindepth 2 -exec bash -c 'codesign -v -R=\"anchor apple\" \"{}\" &> /dev/null || (echo \"{}\" && strip -rSTx \"{}\")' \\;\n    fi\n# fi\n";
+		};
+		378305922C0891C0008D25E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,7 +590,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -610,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -756,7 +774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet;
 				PRODUCT_NAME = kMeet;
 				SWIFT_VERSION = 5.0;
@@ -783,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet;
 				PRODUCT_NAME = kMeet;
 				SWIFT_VERSION = 5.0;
