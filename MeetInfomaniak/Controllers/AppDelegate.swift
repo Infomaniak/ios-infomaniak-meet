@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             builder.setFeatureFlag("recording.enabled", withBoolean: false)
             builder.setFeatureFlag("video-share.enabled", withBoolean: false)
             builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
+            builder.setConfigOverride("hideConferenceSubject", withBoolean: true)
         }
         JitsiMeet.sharedInstance().defaultConferenceOptions = jitisiOptions
 
