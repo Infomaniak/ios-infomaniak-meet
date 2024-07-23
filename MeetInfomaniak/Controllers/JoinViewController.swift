@@ -167,7 +167,7 @@ class JoinViewController: UIViewController {
                 joinUrl = urlComponents.url!
 
                 usernameTextField.text = username
-                performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+                goToConferenceViewController()
             }
 
         } else {
@@ -189,13 +189,16 @@ class JoinViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let conferenceViewController = segue.destination as? ConferenceViewController {
-            UserDefaults.store(username: usernameTextField.text!)
-            conferenceViewController.roomName = roomId
-            conferenceViewController.displayName = usernameTextField.text!
-            conferenceViewController.host = host
-        }
+    func goToConferenceViewController() {
+        guard let username = usernameTextField.text else { return }
+
+        UserDefaults.store(username: username)
+        let conferenceViewController = ConferenceViewController(
+            displayName: username,
+            roomName: roomId,
+            host: host
+        )
+        navigationController?.pushViewController(conferenceViewController, animated: true)
     }
 
     @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
@@ -236,14 +239,14 @@ class JoinViewController: UIViewController {
                             } else {
                                 self.host = URL(string: baseServerURL)!
                             }
-                            self.performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+                            self.goToConferenceViewController()
                         }
                         self.joinMeetingButton.setLoading(false)
                     }
                 }
             } else {
                 joinMeetingButton.setLoading(false)
-                performSegue(withIdentifier: "goToConferenceRoomSegue", sender: nil)
+                goToConferenceViewController()
             }
         } else {
             joinMeetingButton.setLoading(false)
