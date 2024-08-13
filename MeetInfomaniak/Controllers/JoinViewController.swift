@@ -247,6 +247,13 @@ class JoinViewController: UIViewController {
                     }
                 }
             } else {
+                if let rawLink = roomLinkTextField.text,
+                   let link = URL(string: rawLink),
+                   let scheme = link.scheme,
+                   let host = link.host {
+                    self.host = URL(string: "https://\(host)")
+                    roomId = rawLink.replacingOccurrences(of: "\(scheme)://\(host)/", with: "")
+                }
                 joinMeetingButton.setLoading(false)
                 goToConferenceViewController()
             }
