@@ -27,10 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             builder.serverURL = URL(string: baseServerURL)
             builder.setVideoMuted(true)
 
-            builder.setFeatureFlag("prejoinpage.enabled", withBoolean: false)
             builder.setFeatureFlag("settings.enabled", withBoolean: false)
             builder.setFeatureFlag("unsaferoomwarning.enabled", withBoolean: false)
-            builder.setFeatureFlag("welcomepage.enable", withBoolean: false)
             builder.setFeatureFlag("recording.enabled", withBoolean: false)
             builder.setFeatureFlag("video-share.enabled", withBoolean: false)
             builder.setFeatureFlag("live-streaming.enabled", withBoolean: false)
