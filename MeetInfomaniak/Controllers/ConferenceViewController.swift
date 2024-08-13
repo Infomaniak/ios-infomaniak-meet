@@ -48,4 +48,8 @@ class ConferenceViewController: UIViewController, JitsiMeetViewDelegate {
     func conferenceTerminated(_ data: [AnyHashable: Any]!) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func ready(toClose data: [AnyHashable : Any]!) {
+        navigationController?.popViewController(animated: true)
+    }
 }
