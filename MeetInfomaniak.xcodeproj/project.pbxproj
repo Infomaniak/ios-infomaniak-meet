@@ -29,6 +29,8 @@
 		3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
 		3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
 		378305912C088DF0008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
+		37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */; };
+		37B49AB52C6B3C7E00188171 /* RoomCodeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */; };
 		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
 		37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
 		37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
@@ -80,6 +82,7 @@
 		378305722C088CEA008D25E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		378305772C088CEA008D25E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378305782C088CEA008D25E4 /* MeetInfomaniakAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetInfomaniakAppClip.entitlements; sourceTree = "<group>"; };
+		37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCodeChecker.swift; sourceTree = "<group>"; };
 		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		37F3114A24E270B8005E370E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		37F3114E24E2730D005E370E /* CodeRoomName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRoomName.swift; sourceTree = "<group>"; };
@@ -205,6 +208,7 @@
 				37F3115224E281B8005E370E /* UIButton+Extension.swift */,
 				37FF73792435CCE3003FC067 /* Localizable.swift */,
 				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
+				37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B49AB52C6B3C7E00188171 /* RoomCodeChecker.swift in Sources */,
 				378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */,
 				378305812C088DBA008D25E4 /* Assets.swift in Sources */,
 				378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */,
@@ -498,6 +503,7 @@
 				3727BA5A2624419B000FE333 /* Assets.swift in Sources */,
 				37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */,
 				37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */,
+				37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
 				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
 				37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */,

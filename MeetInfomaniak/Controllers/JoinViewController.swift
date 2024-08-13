@@ -22,7 +22,7 @@ class JoinViewController: UIViewController {
     private var roomLinkFieldController: MDCTextInputControllerOutlined!
     private var infoButton: UIButton!
 
-    private let roomCodeRegex = try! NSRegularExpression(pattern: #"^(\d{3}-\d{4}-\d{3}|\d{10})$"#)
+    private let roomCodeChecker = RoomCodeChecker()
     private let hashCharList = Array("abcdefghijklmnopqrstuvwxyz")
     private var roomId: String!
     private var host: URL?
@@ -147,11 +147,7 @@ class JoinViewController: UIViewController {
                 }
             } else if UIPasteboard.general.hasStrings {
                 if let possibleRoomLink = UIPasteboard.general.string {
-                    if possibleRoomLink.count == 16 || roomCodeRegex.matches(
-                        in: possibleRoomLink,
-                        options: [],
-                        range: NSRange(location: 0, length: possibleRoomLink.utf16.count)
-                    ).count > 0 {
+                    if possibleRoomLink.count == 16 || roomCodeChecker.isRoomCode(text: possibleRoomLink) {
                         roomLinkTextField.text = possibleRoomLink
                         roomId = possibleRoomLink
                     } else if let url = URL(string: possibleRoomLink) {
@@ -217,48 +213,50 @@ class JoinViewController: UIViewController {
             roomLinkFieldController?.setErrorText("mandatoryField".localized, errorAccessibilityValue: "mandatoryField".localized)
         }
 
-        if canStartMeeting() {
-            if roomCodeRegex.matches(in: roomText, options: [], range: NSRange(location: 0, length: roomText.utf16.count))
-                .count > 0 {
-                ApiFetcher.getRoomNameFromCode(roomText.replacingOccurrences(of: "-", with: "")) { response, error in
-                    DispatchQueue.main.async {
-                        if error != nil {
-                            self.roomLinkFieldController?.setErrorText(
-                                "",
-                                errorAccessibilityValue: "codeDoesntExistError".localized
-                            )
-                            self.infoButton.tintColor = self.roomLinkFieldController?.errorColor
-                            self.infoButton.removeTarget(self, action: nil, for: .touchUpInside)
-                            self.infoButton.addTarget(
-                                self,
-                                action: #selector(JoinViewController.infoErrorButtonPressed),
-                                for: .touchUpInside
-                            )
+        guard canStartMeeting() else {
+            joinMeetingButton.setLoading(false)
+            return
+        }
+
+        if roomCodeChecker.isRoomCode(text: roomText) {
+            ApiFetcher.getRoomNameFromCode(roomText.replacingOccurrences(of: "-", with: "")) { response, error in
+                DispatchQueue.main.async {
+                    guard error != nil else {
+                        self.roomId = response?.data.name
+                        if let host = response?.data.hostname {
+                            self.host = URL(string: "https://" + host)
                         } else {
-                            self.roomId = response?.data.name
-                            if let host = response?.data.hostname {
-                                self.host = URL(string: "https://" + host)
-                            } else {
-                                self.host = URL(string: baseServerURL)!
-                            }
-                            self.goToConferenceViewController()
+                            self.host = URL(string: baseServerURL)!
                         }
+                        self.goToConferenceViewController()
                         self.joinMeetingButton.setLoading(false)
+                        return
                     }
+
+                    self.roomLinkFieldController?.setErrorText(
+                        "",
+                        errorAccessibilityValue: "codeDoesntExistError".localized
+                    )
+                    self.infoButton.tintColor = self.roomLinkFieldController?.errorColor
+                    self.infoButton.removeTarget(self, action: nil, for: .touchUpInside)
+                    self.infoButton.addTarget(
+                        self,
+                        action: #selector(JoinViewController.infoErrorButtonPressed),
+                        for: .touchUpInside
+                    )
+                    self.joinMeetingButton.setLoading(false)
                 }
-            } else {
-                if let rawLink = roomLinkTextField.text,
-                   let link = URL(string: rawLink),
-                   let scheme = link.scheme,
-                   let host = link.host {
-                    self.host = URL(string: "https://\(host)")
-                    roomId = rawLink.replacingOccurrences(of: "\(scheme)://\(host)/", with: "")
-                }
-                joinMeetingButton.setLoading(false)
-                goToConferenceViewController()
             }
         } else {
+            if let rawLink = roomLinkTextField.text,
+               let link = URL(string: rawLink),
+               let scheme = link.scheme,
+               let host = link.host {
+                self.host = URL(string: "https://\(host)")
+                roomId = rawLink.replacingOccurrences(of: "\(scheme)://\(host)/", with: "")
+            }
             joinMeetingButton.setLoading(false)
+            goToConferenceViewController()
         }
     }
 
