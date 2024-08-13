@@ -117,14 +117,16 @@ class JoinViewController: UIViewController {
     }
 
     private func generateRoomId() -> String {
-        return String((0 ..< 16).map { _ in hashCharList.randomElement()! })
+        return String((0 ..< 16).compactMap { _ in hashCharList.randomElement() })
     }
 
     func canStartMeeting() -> Bool {
+        guard let username = usernameTextField.text else { return false }
+
         if joining {
-            return usernameTextField.text!.count > 1 && roomLinkTextField.text!.count > 0
+            return username.count > 1 && (roomLinkTextField.text?.count ?? 0) > 0
         } else {
-            return usernameTextField.text!.count > 1
+            return username.count > 1
         }
     }
 
