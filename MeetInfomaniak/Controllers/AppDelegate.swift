@@ -8,6 +8,7 @@
 
 import JitsiMeetSDK
 import UIKit
+import VersionChecker
 
 let baseServerURL = "https://kmeet.infomaniak.com"
 @UIApplicationMain
@@ -38,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.rootViewController = UINavigationController(rootViewController: InitialViewController.instantiate())
         window?.makeKeyAndVisible()
+        Task {
+            try? await checkAppVersion()
+        }
         return true
     }
 
@@ -72,5 +76,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.setViewControllers([InitialViewController.instantiate(), joinViewController], animated: false)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+
+    private func showUpdateRequired() {
+        window?.rootViewController = MeetUpdateRequiredViewController()
+        window?.makeKeyAndVisible()
+    }
+
+    private func checkAppVersion() async throws {
+        guard try await VersionChecker.standard.checkAppVersionStatus() == .updateIsRequired else { return }
+        Task { @MainActor in
+            showUpdateRequired()
+        }
     }
 }
