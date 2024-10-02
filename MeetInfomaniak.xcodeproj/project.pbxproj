@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08F05D9E2CAD1BE3009AF11A /* VersionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05D9D2CAD1BE3009AF11A /* VersionChecker */; };
+		08F05DA02CAD1BEC009AF11A /* VersionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05D9F2CAD1BEC009AF11A /* VersionChecker */; };
+		08F05DA32CAD1C61009AF11A /* InfomaniakCoreCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DA22CAD1C61009AF11A /* InfomaniakCoreCommonUI */; };
+		08F05DA52CAD1C61009AF11A /* InfomaniakCoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DA42CAD1C61009AF11A /* InfomaniakCoreSwiftUI */; };
+		08F05DA72CAD1C61009AF11A /* InfomaniakCoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DA62CAD1C61009AF11A /* InfomaniakCoreUIKit */; };
+		08F05DA92CAD1C6F009AF11A /* InfomaniakCoreCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DA82CAD1C6F009AF11A /* InfomaniakCoreCommonUI */; };
+		08F05DAB2CAD1C6F009AF11A /* InfomaniakCoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DAA2CAD1C6F009AF11A /* InfomaniakCoreSwiftUI */; };
+		08F05DAD2CAD1C6F009AF11A /* InfomaniakCoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08F05DAC2CAD1C6F009AF11A /* InfomaniakCoreUIKit */; };
+		08F05DAF2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DAE2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift */; };
+		08F05DB02CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DAE2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift */; };
+		08F05DB42CAD1D25009AF11A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DB32CAD1D25009AF11A /* Constants.swift */; };
+		08F05DB52CAD1D25009AF11A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DB32CAD1D25009AF11A /* Constants.swift */; };
+		08F05DB72CAD1D32009AF11A /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DB62CAD1D32009AF11A /* UIConstants.swift */; };
+		08F05DB82CAD1D32009AF11A /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F05DB62CAD1D32009AF11A /* UIConstants.swift */; };
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
 		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
@@ -75,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniakAppClip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08F05DAE2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpdateRequiredViewController.swift; sourceTree = "<group>"; };
+		08F05DB32CAD1D25009AF11A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		08F05DB62CAD1D32009AF11A /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
@@ -120,7 +137,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F05DAD2CAD1C6F009AF11A /* InfomaniakCoreUIKit in Frameworks */,
 				E79CDC513B54D5A9ABE9C7DF /* Pods_MeetInfomaniakAppClip.framework in Frameworks */,
+				08F05DA92CAD1C6F009AF11A /* InfomaniakCoreCommonUI in Frameworks */,
+				08F05DAB2CAD1C6F009AF11A /* InfomaniakCoreSwiftUI in Frameworks */,
+				08F05DA02CAD1BEC009AF11A /* VersionChecker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,13 +149,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F05DA72CAD1C61009AF11A /* InfomaniakCoreUIKit in Frameworks */,
 				34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */,
+				08F05DA32CAD1C61009AF11A /* InfomaniakCoreCommonUI in Frameworks */,
+				08F05DA52CAD1C61009AF11A /* InfomaniakCoreSwiftUI in Frameworks */,
+				08F05D9E2CAD1BE3009AF11A /* VersionChecker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08F05DB12CAD1D16009AF11A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08F05DB32CAD1D25009AF11A /* Constants.swift */,
+				08F05DB62CAD1D32009AF11A /* UIConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		378305682C088CE8008D25E4 /* MeetInfomaniakAppClip */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +212,7 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
+				08F05DB12CAD1D16009AF11A /* Utils */,
 				37FF73782435CC8D003FC067 /* Extensions */,
 				37FF736E2435CB41003FC067 /* Resources */,
 				37FF737D2435D219003FC067 /* Controllers */,
@@ -220,6 +255,7 @@
 				37FF73572434850A003FC067 /* AppDelegate.swift */,
 				37FF735B2434850A003FC067 /* JoinViewController.swift */,
 				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
+				08F05DAE2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +356,10 @@
 				it,
 			);
 			mainGroup = 37FF734B2434850A003FC067;
+			packageReferences = (
+				08F05D9C2CAD1BE3009AF11A /* XCRemoteSwiftPackageReference "ios-version-checker" */,
+				08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */,
+			);
 			productRefGroup = 37FF73552434850A003FC067 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -483,8 +523,11 @@
 				378305812C088DBA008D25E4 /* Assets.swift in Sources */,
 				378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */,
 				378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */,
+				08F05DB42CAD1D25009AF11A /* Constants.swift in Sources */,
 				378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */,
+				08F05DB82CAD1D32009AF11A /* UIConstants.swift in Sources */,
 				378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */,
+				08F05DAF2CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift in Sources */,
 				378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */,
 				378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */,
 				378305882C088DBA008D25E4 /* Localizable.swift in Sources */,
@@ -503,8 +546,11 @@
 				3727BA5A2624419B000FE333 /* Assets.swift in Sources */,
 				37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */,
 				37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */,
+				08F05DB52CAD1D25009AF11A /* Constants.swift in Sources */,
 				37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */,
+				08F05DB72CAD1D32009AF11A /* UIConstants.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
+				08F05DB02CAD1D04009AF11A /* MeetUpdateRequiredViewController.swift in Sources */,
 				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
 				37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */,
 				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
@@ -846,6 +892,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08F05D9C2CAD1BE3009AF11A /* XCRemoteSwiftPackageReference "ios-version-checker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Infomaniak/ios-version-checker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.2;
+			};
+		};
+		08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Infomaniak/ios-core-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08F05D9D2CAD1BE3009AF11A /* VersionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05D9C2CAD1BE3009AF11A /* XCRemoteSwiftPackageReference "ios-version-checker" */;
+			productName = VersionChecker;
+		};
+		08F05D9F2CAD1BEC009AF11A /* VersionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05D9C2CAD1BE3009AF11A /* XCRemoteSwiftPackageReference "ios-version-checker" */;
+			productName = VersionChecker;
+		};
+		08F05DA22CAD1C61009AF11A /* InfomaniakCoreCommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreCommonUI;
+		};
+		08F05DA42CAD1C61009AF11A /* InfomaniakCoreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreSwiftUI;
+		};
+		08F05DA62CAD1C61009AF11A /* InfomaniakCoreUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIKit;
+		};
+		08F05DA82CAD1C6F009AF11A /* InfomaniakCoreCommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreCommonUI;
+		};
+		08F05DAA2CAD1C6F009AF11A /* InfomaniakCoreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreSwiftUI;
+		};
+		08F05DAC2CAD1C6F009AF11A /* InfomaniakCoreUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F05DA12CAD1C61009AF11A /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37FF734C2434850A003FC067 /* Project object */;
 }
