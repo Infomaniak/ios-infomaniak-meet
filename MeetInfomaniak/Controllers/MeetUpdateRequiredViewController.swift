@@ -20,7 +20,7 @@ class MeetUpdateRequiredViewController: UIViewController {
         buttonStyle: .init(
             background: Color("infomaniakTint"),
             textStyle: .init(font: Font(UIFont.systemFont(ofSize: UIFontMetrics.default.scaledValue(for: 16), weight: .medium)), color: Color(.secondaryTint)),
-            height: 60,
+            height: 50,
             radius: UIConstants.buttonsRadius
         )
     )
