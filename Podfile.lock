@@ -1,7 +1,7 @@
 PODS:
-  - JitsiMeetSDKLite (10.0.1-lite):
+  - JitsiMeetSDKLite (11.1.3-lite):
     - JitsiWebRTC (~> 124.0)
-  - JitsiWebRTC (124.0.0)
+  - JitsiWebRTC (124.0.2)
   - MaterialComponents/AnimationTiming (123.0.0)
   - MaterialComponents/Availability (123.0.0)
   - MaterialComponents/Buttons (123.0.0):
@@ -60,7 +60,7 @@ PODS:
   - MDFTextAccessibility (2.0.1)
 
 DEPENDENCIES:
-  - JitsiMeetSDKLite (= 10.0.1-lite)
+  - JitsiMeetSDKLite (= 11.1.3-lite)
   - MaterialComponents/TextFields (= 123.0.0)
 
 SPEC REPOS:
@@ -72,12 +72,12 @@ SPEC REPOS:
     - MDFTextAccessibility
 
 SPEC CHECKSUMS:
-  JitsiMeetSDKLite: 2d03ae27519b27a1db86ccfd98b67836da5c3a71
-  JitsiWebRTC: 37fb2fb70d42cac58c06948527a5f9e1b3f50812
+  JitsiMeetSDKLite: 366e097b0a0883122e923baab7506477984b6e3d
+  JitsiWebRTC: b47805ab5668be38e7ee60e2258f49badfe8e1d0
   MaterialComponents: 7a40e33dc8726359d12e667b74a4007d87e4abd4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
 
-PODFILE CHECKSUM: fb118fe887d2bb013c12a13a9c05d6a0ecbdaa9b
+PODFILE CHECKSUM: 54b15f7c50cb9fe3b92784f3a0cdf5242574d42c
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.16.2

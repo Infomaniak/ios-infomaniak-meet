@@ -1,15 +1,15 @@
-platform :ios, '13.4'
+platform :ios, '15.6'
 
 target 'MeetInfomaniak' do
   use_frameworks!
   pod 'MaterialComponents/TextFields', '123.0.0'
-  pod 'JitsiMeetSDKLite', '10.0.1-lite'
+  pod 'JitsiMeetSDKLite', '11.1.3-lite'
 end
 
 target 'MeetInfomaniakAppClip' do
   use_frameworks!
   pod 'MaterialComponents/TextFields', '123.0.0'
-  pod 'JitsiMeetSDKLite', '10.0.1-lite'
+  pod 'JitsiMeetSDKLite', '11.1.3-lite'
 end
 
 post_install do |installer| 
