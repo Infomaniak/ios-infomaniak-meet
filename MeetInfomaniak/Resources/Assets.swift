@@ -6,6 +6,7 @@
 //  Copyright © 2021 Philippe Weidmann. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
 
 enum Assets {
@@ -13,4 +14,13 @@ enum Assets {
     static let textColor = UIColor(named: "textColor")!
     static let outlineColor = UIColor(named: "outlineColor")!
     static let infoIcon = UIImage(named: "ic_info")!
+}
+
+extension Assets {
+    enum SwiftUIColor {
+        static let infomaniakTintColor = Color("infomaniakTint")
+        static let textColor = Color("textColor")
+        static let backgroundColor = Color("backgroundColor")
+        static let outlineColor = Color("outlineColor")
+    }
 }
