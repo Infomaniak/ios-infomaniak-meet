@@ -45,7 +45,7 @@ class InitialViewController: UIViewController {
                             if #available(iOS 16.0, *) {
                                 sheet.detents = [
                                     .custom { _ in
-                                        return 510
+                                        return 435
                                     }
                                 ]
                             } else {

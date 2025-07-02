@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "laptop-stars-rocket-small.svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "laptop-stars-rocket-small-dark.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

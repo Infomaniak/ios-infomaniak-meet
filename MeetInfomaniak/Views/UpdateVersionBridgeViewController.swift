@@ -14,12 +14,14 @@ enum UpdateVersionBridgeViewController {
     public static func instantiate() -> UIViewController {
         @Environment(\.openURL) var openURL
 
-        let swiftUIView = UpdateVersionView(image: Image("laptop-stars-rocket")) { willUpdate in
+        let swiftUIView = UpdateVersionView(image: Image("laptop-stars-rocket-small")) { willUpdate in
             if willUpdate {
                 openURL(Constants.appStore)
             }
         }
 
-        return UIHostingController(rootView: ScrollView { swiftUIView })
+        return UIHostingController(rootView:
+            swiftUIView
+                .padding(.top, 20))
     }
 }
