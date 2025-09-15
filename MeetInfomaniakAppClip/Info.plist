@@ -13,5 +13,11 @@
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera access for video chat</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>We need access to your calendar to schedule meetings</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need microphone access for voice chat</string>
 </dict>
 </plist>
