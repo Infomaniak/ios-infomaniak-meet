@@ -1,0 +1,131 @@
+{
+  "fill" : {
+    "automatic-gradient" : "srgb:0.23922,0.74118,0.52549,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "value" : "none"
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:0.10196,0.43529,0.31373,1.00000"
+              }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "display-p3:0.00000,0.00000,0.00000,1.00000"
+              }
+            }
+          ],
+          "image-name" : "4 – Layer.svg",
+          "name" : "4 – Layer"
+        },
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            }
+          ],
+          "image-name" : "3 – Layer 4.svg",
+          "name" : "3 – Layer 4",
+          "opacity-specializations" : [
+            {
+              "appearance" : "tinted",
+              "value" : 1
+            }
+          ]
+        },
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            }
+          ],
+          "hidden" : false,
+          "image-name" : "2 – Layer 2.svg",
+          "name" : "2 – Layer 2",
+          "opacity-specializations" : [
+            {
+              "value" : 1
+            },
+            {
+              "appearance" : "dark",
+              "value" : 0.75
+            },
+            {
+              "appearance" : "tinted",
+              "value" : 0.7
+            }
+          ]
+        },
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "srgb:0.23922,0.74118,0.52549,1.00000"
+              }
+            }
+          ],
+          "image-name" : "1 – Layer 2.svg",
+          "name" : "1 – Layer 2",
+          "opacity-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : 0.3
+            },
+            {
+              "appearance" : "tinted",
+              "value" : 0.3
+            }
+          ]
+        }
+      ],
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.4
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

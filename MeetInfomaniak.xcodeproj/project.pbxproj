@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
 		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
+		374378B92E78390800D447F6 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 374378B82E78390800D447F6 /* AppIcon.icon */; };
+		374378BA2E78390800D447F6 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 374378B82E78390800D447F6 /* AppIcon.icon */; };
 		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		378305732C088CEA008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378305722C088CEA008D25E4 /* Assets.xcassets */; };
 		3783057C2C088CEA008D25E4 /* MeetInfomaniakAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -77,6 +79,7 @@
 		04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniakAppClip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		374378B82E78390800D447F6 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetInfomaniakAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378305722C088CEA008D25E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 		37FF736E2435CB41003FC067 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				374378B82E78390800D447F6 /* AppIcon.icon */,
 				37FF73652434850C003FC067 /* Info.plist */,
 				37FF73602434850C003FC067 /* Assets.xcassets */,
 				37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */,
@@ -338,6 +342,7 @@
 				3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */,
 				3783058D2C088DD7008D25E4 /* LaunchScreen.storyboard in Resources */,
 				3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */,
+				374378BA2E78390800D447F6 /* AppIcon.icon in Resources */,
 				378305732C088CEA008D25E4 /* Assets.xcassets in Resources */,
 				378305912C088DF0008D25E4 /* Assets.xcassets in Resources */,
 				3783058C2C088DD1008D25E4 /* Main.storyboard in Resources */,
@@ -353,6 +358,7 @@
 				37FF73612434850C003FC067 /* Assets.xcassets in Resources */,
 				37FF735F2434850A003FC067 /* Main.storyboard in Resources */,
 				37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */,
+				374378B92E78390800D447F6 /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
