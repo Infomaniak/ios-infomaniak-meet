@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08CAAA862DF952A100C31C34 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAAA852DF952A100C31C34 /* Font+Extension.swift */; };
+		08CAAA872DF952A100C31C34 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAAA852DF952A100C31C34 /* Font+Extension.swift */; };
+		08CAAC3B2DF2FA3900346618 /* VersionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC3A2DF2FA3900346618 /* VersionChecker */; };
+		08CAAC3D2DF2FA3900346618 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC3C2DF2FA3900346618 /* DesignSystem */; };
+		08CAAC3F2DF2FA3900346618 /* InfomaniakCoreCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC3E2DF2FA3900346618 /* InfomaniakCoreCommonUI */; };
+		08CAAC412DF2FA3900346618 /* InfomaniakCoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC402DF2FA3900346618 /* InfomaniakCoreSwiftUI */; };
+		08CAAC432DF2FA3900346618 /* InfomaniakCoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC422DF2FA3900346618 /* InfomaniakCoreUIKit */; };
+		08CAAC452DF2FA3900346618 /* InfomaniakCoreUIResources in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC442DF2FA3900346618 /* InfomaniakCoreUIResources */; };
+		08CAAC472DF2FA3900346618 /* InfomaniakPrivacyManagement in Frameworks */ = {isa = PBXBuildFile; productRef = 08CAAC462DF2FA3900346618 /* InfomaniakPrivacyManagement */; };
+		08CAAC492DF30A6E00346618 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAAC482DF30A6E00346618 /* Constants.swift */; };
+		08CAAC4A2DF30A6E00346618 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CAAC482DF30A6E00346618 /* Constants.swift */; };
+		08D897EE2DF2E45F009D5033 /* MeetUpdateRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D897ED2DF2E45F009D5033 /* MeetUpdateRequiredView.swift */; };
+		08D897EF2DF2E45F009D5033 /* MeetUpdateRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D897ED2DF2E45F009D5033 /* MeetUpdateRequiredView.swift */; };
+		08D897F12DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D897F02DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift */; };
+		08D897F22DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D897F02DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift */; };
+		08D897F52DF2E4AA009D5033 /* VersionChecker in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897F42DF2E4AA009D5033 /* VersionChecker */; };
+		08D897F82DF2E4BA009D5033 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897F72DF2E4BA009D5033 /* DesignSystem */; };
+		08D897FA2DF2E4BA009D5033 /* InfomaniakCoreCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897F92DF2E4BA009D5033 /* InfomaniakCoreCommonUI */; };
+		08D897FC2DF2E4BA009D5033 /* InfomaniakCoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897FB2DF2E4BA009D5033 /* InfomaniakCoreSwiftUI */; };
+		08D897FE2DF2E4BA009D5033 /* InfomaniakCoreUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897FD2DF2E4BA009D5033 /* InfomaniakCoreUIKit */; };
+		08D898002DF2E4BA009D5033 /* InfomaniakCoreUIResources in Frameworks */ = {isa = PBXBuildFile; productRef = 08D897FF2DF2E4BA009D5033 /* InfomaniakCoreUIResources */; };
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
 		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
 		374378B92E78390800D447F6 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 374378B82E78390800D447F6 /* AppIcon.icon */; };
@@ -77,6 +98,10 @@
 
 /* Begin PBXFileReference section */
 		04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniakAppClip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08CAAA852DF952A100C31C34 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		08CAAC482DF30A6E00346618 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		08D897ED2DF2E45F009D5033 /* MeetUpdateRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpdateRequiredView.swift; sourceTree = "<group>"; };
+		08D897F02DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVersionBridgeViewController.swift; sourceTree = "<group>"; };
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
 		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		374378B82E78390800D447F6 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
@@ -123,7 +148,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CAAC3D2DF2FA3900346618 /* DesignSystem in Frameworks */,
+				08CAAC432DF2FA3900346618 /* InfomaniakCoreUIKit in Frameworks */,
 				E79CDC513B54D5A9ABE9C7DF /* Pods_MeetInfomaniakAppClip.framework in Frameworks */,
+				08CAAC472DF2FA3900346618 /* InfomaniakPrivacyManagement in Frameworks */,
+				08CAAC452DF2FA3900346618 /* InfomaniakCoreUIResources in Frameworks */,
+				08CAAC3B2DF2FA3900346618 /* VersionChecker in Frameworks */,
+				08CAAC3F2DF2FA3900346618 /* InfomaniakCoreCommonUI in Frameworks */,
+				08CAAC412DF2FA3900346618 /* InfomaniakCoreSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,13 +163,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D897F82DF2E4BA009D5033 /* DesignSystem in Frameworks */,
+				08D897FE2DF2E4BA009D5033 /* InfomaniakCoreUIKit in Frameworks */,
 				34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */,
+				08D898002DF2E4BA009D5033 /* InfomaniakCoreUIResources in Frameworks */,
+				08D897F52DF2E4AA009D5033 /* VersionChecker in Frameworks */,
+				08D897FA2DF2E4BA009D5033 /* InfomaniakCoreCommonUI in Frameworks */,
+				08D897FC2DF2E4BA009D5033 /* InfomaniakCoreSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D897EC2DF2E442009D5033 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08D897ED2DF2E45F009D5033 /* MeetUpdateRequiredView.swift */,
+				08D897F02DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		378305682C088CE8008D25E4 /* MeetInfomaniakAppClip */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +228,7 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
+				08D897EC2DF2E442009D5033 /* Views */,
 				37FF73782435CC8D003FC067 /* Extensions */,
 				37FF736E2435CB41003FC067 /* Resources */,
 				37FF737D2435D219003FC067 /* Controllers */,
@@ -201,6 +249,7 @@
 				37FF73732435CB92003FC067 /* Localizable.strings */,
 				37FF738B2435DB28003FC067 /* InfoPlist.strings */,
 				3727BA592624419B000FE333 /* Assets.swift */,
+				08CAAC482DF30A6E00346618 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +262,7 @@
 				37FF73792435CCE3003FC067 /* Localizable.swift */,
 				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
 				37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */,
+				08CAAA852DF952A100C31C34 /* Font+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +374,10 @@
 				it,
 			);
 			mainGroup = 37FF734B2434850A003FC067;
+			packageReferences = (
+				08D897F32DF2E4AA009D5033 /* XCRemoteSwiftPackageReference "ios-version-checker" */,
+				08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */,
+			);
 			productRefGroup = 37FF73552434850A003FC067 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -496,13 +550,17 @@
 				378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */,
 				378305812C088DBA008D25E4 /* Assets.swift in Sources */,
 				378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */,
+				08D897F22DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift in Sources */,
 				378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */,
 				378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */,
+				08CAAC492DF30A6E00346618 /* Constants.swift in Sources */,
 				378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */,
 				378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */,
 				378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */,
+				08D897EE2DF2E45F009D5033 /* MeetUpdateRequiredView.swift in Sources */,
 				378305882C088DBA008D25E4 /* Localizable.swift in Sources */,
 				378305892C088DBA008D25E4 /* InitialViewController.swift in Sources */,
+				08CAAA872DF952A100C31C34 /* Font+Extension.swift in Sources */,
 				3783058A2C088DBA008D25E4 /* AppDelegate.swift in Sources */,
 				3783058B2C088DBA008D25E4 /* UIViewController+Extension.swift in Sources */,
 			);
@@ -516,13 +574,17 @@
 				37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */,
 				3727BA5A2624419B000FE333 /* Assets.swift in Sources */,
 				37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */,
+				08D897F12DF2E46C009D5033 /* UpdateVersionBridgeViewController.swift in Sources */,
 				37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */,
 				37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */,
+				08CAAC4A2DF30A6E00346618 /* Constants.swift in Sources */,
 				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
 				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
 				37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */,
+				08D897EF2DF2E45F009D5033 /* MeetUpdateRequiredView.swift in Sources */,
 				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
 				37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */,
+				08CAAA862DF952A100C31C34 /* Font+Extension.swift in Sources */,
 				37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */,
 				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,
 			);
@@ -860,6 +922,93 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08D897F32DF2E4AA009D5033 /* XCRemoteSwiftPackageReference "ios-version-checker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Infomaniak/ios-version-checker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.3;
+			};
+		};
+		08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Infomaniak/ios-core-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 18.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08CAAC3A2DF2FA3900346618 /* VersionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F32DF2E4AA009D5033 /* XCRemoteSwiftPackageReference "ios-version-checker" */;
+			productName = VersionChecker;
+		};
+		08CAAC3C2DF2FA3900346618 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = DesignSystem;
+		};
+		08CAAC3E2DF2FA3900346618 /* InfomaniakCoreCommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreCommonUI;
+		};
+		08CAAC402DF2FA3900346618 /* InfomaniakCoreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreSwiftUI;
+		};
+		08CAAC422DF2FA3900346618 /* InfomaniakCoreUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIKit;
+		};
+		08CAAC442DF2FA3900346618 /* InfomaniakCoreUIResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIResources;
+		};
+		08CAAC462DF2FA3900346618 /* InfomaniakPrivacyManagement */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakPrivacyManagement;
+		};
+		08D897F42DF2E4AA009D5033 /* VersionChecker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F32DF2E4AA009D5033 /* XCRemoteSwiftPackageReference "ios-version-checker" */;
+			productName = VersionChecker;
+		};
+		08D897F72DF2E4BA009D5033 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = DesignSystem;
+		};
+		08D897F92DF2E4BA009D5033 /* InfomaniakCoreCommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreCommonUI;
+		};
+		08D897FB2DF2E4BA009D5033 /* InfomaniakCoreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreSwiftUI;
+		};
+		08D897FD2DF2E4BA009D5033 /* InfomaniakCoreUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIKit;
+		};
+		08D897FF2DF2E4BA009D5033 /* InfomaniakCoreUIResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D897F62DF2E4BA009D5033 /* XCRemoteSwiftPackageReference "ios-core-ui" */;
+			productName = InfomaniakCoreUIResources;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37FF734C2434850A003FC067 /* Project object */;
 }
