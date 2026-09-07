@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYs-ge-4Vf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tYs-ge-4Vf">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -101,9 +101,7 @@
                             <constraint firstItem="GEK-An-e0b" firstAttribute="trailing" secondItem="kcV-9N-yeH" secondAttribute="trailing" priority="750" id="xVm-pk-bc3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xYc-AS-uZP">
-                        <barButtonItem key="backBarButtonItem" title=" " id="DMh-dZ-EN3"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" backButtonDisplayMode="minimal" id="xYc-AS-uZP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pl5-I8-W19" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,17 +116,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-o9-ELb">
-                                <rect key="frame" x="10" y="35" width="300" height="498"/>
+                                <rect key="frame" x="16" y="16" width="288" height="536"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="joinParrot" translatesAutoresizingMaskIntoConstraints="NO" id="0Wu-8U-ZXZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="1" y="0.0" width="286" height="286"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="6Wz-In-eHV"/>
                                             <constraint firstAttribute="width" secondItem="0Wu-8U-ZXZ" secondAttribute="height" multiplier="1:1" id="Y7v-Nx-C1C"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T61-Dg-5QS">
-                                        <rect key="frame" x="6" y="332" width="288" height="166"/>
+                                        <rect key="frame" x="0.0" y="318" width="288" height="218"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Quelle réunion souhaitez-vous rejoindre ?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-LA-4bf">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
@@ -140,7 +138,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
-                                                <rect key="frame" x="0.0" y="56" width="288" height="52"/>
+                                                <rect key="frame" x="0.0" y="56" width="288" height="104"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
@@ -157,7 +155,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-PM-LtR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="52" width="288" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -177,7 +175,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSM-yo-5nu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="108" width="288" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -185,7 +183,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
-                                                <rect key="frame" x="0.0" y="116" width="288" height="50"/>
+                                                <rect key="frame" x="0.0" y="168" width="288" height="50"/>
                                                 <color key="backgroundColor" name="infomaniakTint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RrG-PP-J9n"/>
@@ -225,9 +223,7 @@
                             <constraint firstItem="gXz-Nc-58G" firstAttribute="trailing" secondItem="T61-Dg-5QS" secondAttribute="trailing" priority="750" constant="16" id="l5x-Q8-uCB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Orm-aC-SY2">
-                        <barButtonItem key="backBarButtonItem" title=" " id="h5l-ct-tLg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Orm-aC-SY2"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="La4-v6-aOu" id="pDB-Um-9iV"/>
                         <outlet property="centerConstraint" destination="L9s-iy-DU5" id="lEJ-xz-vbP"/>
@@ -247,7 +243,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="awc-Fy-fYv"/>
+        <segue reference="pS5-dP-HSW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_camera" width="24" height="24"/>

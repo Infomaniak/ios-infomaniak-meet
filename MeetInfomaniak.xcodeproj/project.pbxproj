@@ -603,8 +603,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jitsi/jitsi-meet-ios-sdk-releases";
 			requirement = {
-				kind = exactVersion;
-				version = "11.1.3-lite";
+				kind = upToNextMajorVersion;
+				minimumVersion = "13.1.1-lite";
 			};
 		};
 		37A1F868304EEB6E00E7FB3D /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */ = {

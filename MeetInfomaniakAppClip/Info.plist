@@ -9,8 +9,6 @@
 		<key>NSAppClipRequestLocationConfirmation</key>
 		<false/>
 	</dict>
-	<key>UIDesignRequiresCompatibility</key>
-	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSCameraUsageDescription</key>
