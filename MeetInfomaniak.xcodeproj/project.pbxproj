@@ -3,51 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		34ACBBC02615ABB0B6508FA9 /* Pods_MeetInfomaniak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */; };
-		3727BA5A2624419B000FE333 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
-		374378B92E78390800D447F6 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 374378B82E78390800D447F6 /* AppIcon.icon */; };
-		374378BA2E78390800D447F6 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 374378B82E78390800D447F6 /* AppIcon.icon */; };
-		37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
 		378305732C088CEA008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378305722C088CEA008D25E4 /* Assets.xcassets */; };
 		3783057C2C088CEA008D25E4 /* MeetInfomaniakAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */; };
-		378305812C088DBA008D25E4 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727BA592624419B000FE333 /* Assets.swift */; };
-		378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
-		378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF736B24348E13003FC067 /* ConferenceViewController.swift */; };
-		378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
-		378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115224E281B8005E370E /* UIButton+Extension.swift */; };
-		378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
-		378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115024E2795D005E370E /* ApiFetcher.swift */; };
-		378305882C088DBA008D25E4 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
-		378305892C088DBA008D25E4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
-		3783058A2C088DBA008D25E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
-		3783058B2C088DBA008D25E4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
-		3783058C2C088DD1008D25E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
-		3783058D2C088DD7008D25E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73622434850C003FC067 /* LaunchScreen.storyboard */; };
-		3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
-		3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
-		378305912C088DF0008D25E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
-		37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */; };
-		37B49AB52C6B3C7E00188171 /* RoomCodeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */; };
-		37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */; };
-		37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114A24E270B8005E370E /* ApiResponse.swift */; };
-		37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3114E24E2730D005E370E /* CodeRoomName.swift */; };
-		37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115024E2795D005E370E /* ApiFetcher.swift */; };
-		37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3115224E281B8005E370E /* UIButton+Extension.swift */; };
-		37FF73582434850A003FC067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73572434850A003FC067 /* AppDelegate.swift */; };
-		37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF735B2434850A003FC067 /* JoinViewController.swift */; };
-		37FF735F2434850A003FC067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF735D2434850A003FC067 /* Main.storyboard */; };
-		37FF73612434850C003FC067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73602434850C003FC067 /* Assets.xcassets */; };
-		37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73622434850C003FC067 /* LaunchScreen.storyboard */; };
-		37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF736B24348E13003FC067 /* ConferenceViewController.swift */; };
-		37FF73712435CB92003FC067 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF73732435CB92003FC067 /* Localizable.strings */; };
-		37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF73792435CCE3003FC067 /* Localizable.swift */; };
-		37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */; };
-		37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FF738B2435DB28003FC067 /* InfoPlist.strings */; };
 		E79CDC513B54D5A9ABE9C7DF /* Pods_MeetInfomaniakAppClip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,45 +40,40 @@
 /* Begin PBXFileReference section */
 		04DAB76753231C3BBC4AEE3E /* Pods_MeetInfomaniakAppClip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniakAppClip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC9BF686BF93956D02DE99 /* Pods-MeetInfomaniak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.debug.xcconfig"; sourceTree = "<group>"; };
-		3727BA592624419B000FE333 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		374378B82E78390800D447F6 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
-		37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetInfomaniakAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378305722C088CEA008D25E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		378305772C088CEA008D25E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378305782C088CEA008D25E4 /* MeetInfomaniakAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetInfomaniakAppClip.entitlements; sourceTree = "<group>"; };
-		37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCodeChecker.swift; sourceTree = "<group>"; };
-		37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		37F3114A24E270B8005E370E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
-		37F3114E24E2730D005E370E /* CodeRoomName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRoomName.swift; sourceTree = "<group>"; };
-		37F3115024E2795D005E370E /* ApiFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFetcher.swift; sourceTree = "<group>"; };
-		37F3115224E281B8005E370E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		37FF73542434850A003FC067 /* kMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		37FF73572434850A003FC067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37FF735B2434850A003FC067 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
-		37FF735E2434850A003FC067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		37FF73602434850C003FC067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		37FF73632434850C003FC067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37FF73652434850C003FC067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37FF736B24348E13003FC067 /* ConferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
-		37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetInfomaniak.entitlements; sourceTree = "<group>"; };
-		37FF73722435CB92003FC067 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		37FF73742435CBFA003FC067 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		37FF73752435CC0B003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		37FF73762435CC18003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		37FF73772435CC2F003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		37FF73792435CCE3003FC067 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		37FF738A2435DB28003FC067 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37FF738C2435DB2A003FC067 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37FF738D2435DB2A003FC067 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37FF738E2435DB2B003FC067 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37FF738F2435DB2B003FC067 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F7DDC2D6134818B942F8C6E /* Pods-MeetInfomaniakAppClip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniakAppClip.debug.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip.debug.xcconfig"; sourceTree = "<group>"; };
 		7263D3E9DA7C55C78188A072 /* Pods_MeetInfomaniak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetInfomaniak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA01ED631BD6578365D61E9 /* Pods-MeetInfomaniakAppClip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniakAppClip.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniakAppClip/Pods-MeetInfomaniakAppClip.release.xcconfig"; sourceTree = "<group>"; };
 		9724FCBD412AFC35BF0EA214 /* Pods-MeetInfomaniak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetInfomaniak.release.xcconfig"; path = "Target Support Files/Pods-MeetInfomaniak/Pods-MeetInfomaniak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		37A1F5CF304EE76000E7FB3D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 37FF73532434850A003FC067 /* MeetInfomaniak */;
+		};
+		37A1F5D0304EE76000E7FB3D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 378305662C088CE8008D25E4 /* MeetInfomaniakAppClip */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		37A1F587304EE74C00E7FB3D /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+		37A1F596304EE75300E7FB3D /* Controllers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Controllers; sourceTree = "<group>"; };
+		37A1F5A2304EE75700E7FB3D /* Networking */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Networking; sourceTree = "<group>"; };
+		37A1F5BE304EE75F00E7FB3D /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (37A1F5CF304EE76000E7FB3D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 37A1F5D0304EE76000E7FB3D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		378305642C088CE8008D25E4 /* Frameworks */ = {
@@ -148,16 +105,6 @@
 			path = MeetInfomaniakAppClip;
 			sourceTree = "<group>";
 		};
-		37F3114924E270A0005E370E /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				37F3114A24E270B8005E370E /* ApiResponse.swift */,
-				37F3114E24E2730D005E370E /* CodeRoomName.swift */,
-				37F3115024E2795D005E370E /* ApiFetcher.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		37FF734B2434850A003FC067 = {
 			isa = PBXGroup;
 			children = (
@@ -181,51 +128,12 @@
 		37FF73562434850A003FC067 /* MeetInfomaniak */ = {
 			isa = PBXGroup;
 			children = (
-				37FF73782435CC8D003FC067 /* Extensions */,
-				37FF736E2435CB41003FC067 /* Resources */,
-				37FF737D2435D219003FC067 /* Controllers */,
-				37F3114924E270A0005E370E /* Networking */,
+				37A1F587304EE74C00E7FB3D /* Extensions */,
+				37A1F5BE304EE75F00E7FB3D /* Resources */,
+				37A1F596304EE75300E7FB3D /* Controllers */,
+				37A1F5A2304EE75700E7FB3D /* Networking */,
 			);
 			path = MeetInfomaniak;
-			sourceTree = "<group>";
-		};
-		37FF736E2435CB41003FC067 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				374378B82E78390800D447F6 /* AppIcon.icon */,
-				37FF73652434850C003FC067 /* Info.plist */,
-				37FF73602434850C003FC067 /* Assets.xcassets */,
-				37FF736D2434D567003FC067 /* MeetInfomaniak.entitlements */,
-				37FF735D2434850A003FC067 /* Main.storyboard */,
-				37FF73622434850C003FC067 /* LaunchScreen.storyboard */,
-				37FF73732435CB92003FC067 /* Localizable.strings */,
-				37FF738B2435DB28003FC067 /* InfoPlist.strings */,
-				3727BA592624419B000FE333 /* Assets.swift */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		37FF73782435CC8D003FC067 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				37650DC9243C9DE9006C794B /* UserDefaults+Extension.swift */,
-				37F3115224E281B8005E370E /* UIButton+Extension.swift */,
-				37FF73792435CCE3003FC067 /* Localizable.swift */,
-				37FF737A2435CCE3003FC067 /* UIViewController+Extension.swift */,
-				37B49AB32C6B3A1F00188171 /* RoomCodeChecker.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		37FF737D2435D219003FC067 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				37D5D63E24DA97C000F6C0A9 /* InitialViewController.swift */,
-				37FF73572434850A003FC067 /* AppDelegate.swift */,
-				37FF735B2434850A003FC067 /* JoinViewController.swift */,
-				37FF736B24348E13003FC067 /* ConferenceViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B0016E280F08D39872DF0A2D /* Frameworks */ = {
@@ -266,6 +174,12 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				37A1F587304EE74C00E7FB3D /* Extensions */,
+				37A1F596304EE75300E7FB3D /* Controllers */,
+				37A1F5A2304EE75700E7FB3D /* Networking */,
+				37A1F5BE304EE75F00E7FB3D /* Resources */,
+			);
 			name = MeetInfomaniakAppClip;
 			productName = MeetInfomaniakAppClip;
 			productReference = 378305672C088CE8008D25E4 /* MeetInfomaniakAppClip.app */;
@@ -287,6 +201,12 @@
 			);
 			dependencies = (
 				3783057A2C088CEA008D25E4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				37A1F587304EE74C00E7FB3D /* Extensions */,
+				37A1F596304EE75300E7FB3D /* Controllers */,
+				37A1F5A2304EE75700E7FB3D /* Networking */,
+				37A1F5BE304EE75F00E7FB3D /* Resources */,
 			);
 			name = MeetInfomaniak;
 			productName = MeetInfomaniak;
@@ -339,13 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3783058F2C088DE5008D25E4 /* Localizable.strings in Resources */,
-				3783058D2C088DD7008D25E4 /* LaunchScreen.storyboard in Resources */,
-				3783058E2C088DE2008D25E4 /* InfoPlist.strings in Resources */,
-				374378BA2E78390800D447F6 /* AppIcon.icon in Resources */,
 				378305732C088CEA008D25E4 /* Assets.xcassets in Resources */,
-				378305912C088DF0008D25E4 /* Assets.xcassets in Resources */,
-				3783058C2C088DD1008D25E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +267,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FF73642434850C003FC067 /* LaunchScreen.storyboard in Resources */,
-				37FF73712435CB92003FC067 /* Localizable.strings in Resources */,
-				37FF73612434850C003FC067 /* Assets.xcassets in Resources */,
-				37FF735F2434850A003FC067 /* Main.storyboard in Resources */,
-				37FF73892435DB28003FC067 /* InfoPlist.strings in Resources */,
-				374378B92E78390800D447F6 /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,19 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B49AB52C6B3C7E00188171 /* RoomCodeChecker.swift in Sources */,
-				378305802C088DBA008D25E4 /* UserDefaults+Extension.swift in Sources */,
-				378305812C088DBA008D25E4 /* Assets.swift in Sources */,
-				378305822C088DBA008D25E4 /* JoinViewController.swift in Sources */,
-				378305832C088DBA008D25E4 /* ConferenceViewController.swift in Sources */,
-				378305842C088DBA008D25E4 /* CodeRoomName.swift in Sources */,
-				378305852C088DBA008D25E4 /* UIButton+Extension.swift in Sources */,
-				378305862C088DBA008D25E4 /* ApiResponse.swift in Sources */,
-				378305872C088DBA008D25E4 /* ApiFetcher.swift in Sources */,
-				378305882C088DBA008D25E4 /* Localizable.swift in Sources */,
-				378305892C088DBA008D25E4 /* InitialViewController.swift in Sources */,
-				3783058A2C088DBA008D25E4 /* AppDelegate.swift in Sources */,
-				3783058B2C088DBA008D25E4 /* UIViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,19 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FF735C2434850A003FC067 /* JoinViewController.swift in Sources */,
-				37D5D63F24DA97C000F6C0A9 /* InitialViewController.swift in Sources */,
-				3727BA5A2624419B000FE333 /* Assets.swift in Sources */,
-				37F3115124E2795D005E370E /* ApiFetcher.swift in Sources */,
-				37F3115324E281B8005E370E /* UIButton+Extension.swift in Sources */,
-				37B49AB42C6B3A1F00188171 /* RoomCodeChecker.swift in Sources */,
-				37FF73582434850A003FC067 /* AppDelegate.swift in Sources */,
-				37650DCA243C9DE9006C794B /* UserDefaults+Extension.swift in Sources */,
-				37F3114F24E2730D005E370E /* CodeRoomName.swift in Sources */,
-				37FF737B2435CCE3003FC067 /* Localizable.swift in Sources */,
-				37F3114B24E270B8005E370E /* ApiResponse.swift in Sources */,
-				37FF737C2435CCE3003FC067 /* UIViewController+Extension.swift in Sources */,
-				37FF736C24348E13003FC067 /* ConferenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,49 +419,6 @@
 			targetProxy = 378305792C088CEA008D25E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		37FF735D2434850A003FC067 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37FF735E2434850A003FC067 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		37FF73622434850C003FC067 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37FF73632434850C003FC067 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		37FF73732435CB92003FC067 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37FF73722435CB92003FC067 /* en */,
-				37FF73742435CBFA003FC067 /* fr */,
-				37FF73752435CC0B003FC067 /* de */,
-				37FF73762435CC18003FC067 /* es */,
-				37FF73772435CC2F003FC067 /* it */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		37FF738B2435DB28003FC067 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37FF738A2435DB28003FC067 /* en */,
-				37FF738C2435DB2A003FC067 /* fr */,
-				37FF738D2435DB2A003FC067 /* de */,
-				37FF738E2435DB2B003FC067 /* it */,
-				37FF738F2435DB2B003FC067 /* es */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3783057E2C088CEA008D25E4 /* Debug */ = {
