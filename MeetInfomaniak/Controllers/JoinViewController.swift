@@ -6,20 +6,19 @@
 //  Copyright © 2020 Philippe Weidmann. All rights reserved.
 //
 
-import MaterialComponents.MaterialTextFields
 import UIKit
 
-class JoinViewController: UIViewController {
+class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet var centerConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var usernameTextField: MDCTextField!
-    @IBOutlet weak var roomLinkTextField: MDCTextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var roomLinkTextField: UITextField!
+    @IBOutlet weak var usernameErrorLabel: UILabel!
+    @IBOutlet weak var roomLinkErrorLabel: UILabel!
     @IBOutlet weak var joinMeetingButton: UIButton!
     @IBOutlet weak var contentView: UIView!
-    private var usernameFieldController: MDCTextInputControllerOutlined!
-    private var roomLinkFieldController: MDCTextInputControllerOutlined!
     private var infoButton: UIButton!
 
     private let roomCodeChecker = RoomCodeChecker()
@@ -44,19 +43,22 @@ class JoinViewController: UIViewController {
         navigationController?.navigationBar.tintColor = Assets.infomaniakTintColor
 
         hideKeyboardWhenTappedAround()
-        usernameFieldController = MDCTextInputControllerOutlined(textInput: usernameTextField)
-        applyThemeTo(inputController: usernameFieldController!)
-
-        roomLinkFieldController = MDCTextInputControllerOutlined(textInput: roomLinkTextField)
-        applyThemeTo(inputController: roomLinkFieldController!)
-
-        roomLinkTextField.trailingViewMode = .always
+        titleLabel.numberOfLines = 0
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        configure(textField: usernameTextField)
+        configure(textField: roomLinkTextField)
 
         infoButton = UIButton(type: .custom)
+        infoButton.frame = CGRect(x: 0, y: 0, width: 44, height: 48)
         infoButton.setImage(Assets.infoIcon, for: .normal)
         infoButton.tintColor = Assets.outlineColor
         infoButton.addTarget(self, action: #selector(JoinViewController.infoButtonPressed), for: .touchUpInside)
-        roomLinkTextField.trailingView = infoButton
+
+        let infoButtonContainer = UIView(frame: CGRect(x: 0, y: 0, width: 56, height: 48))
+        infoButtonContainer.addSubview(infoButton)
+        roomLinkTextField.rightView = infoButtonContainer
+        roomLinkTextField.rightViewMode = .always
 
         if username != nil {
             usernameTextField.text = username
@@ -67,12 +69,45 @@ class JoinViewController: UIViewController {
         }
     }
 
-    private func applyThemeTo(inputController: MDCTextInputControllerOutlined) {
-        inputController.activeColor = Assets.infomaniakTintColor
-        inputController.inlinePlaceholderColor = Assets.outlineColor
-        inputController.floatingPlaceholderNormalColor = Assets.outlineColor
-        inputController.floatingPlaceholderActiveColor = Assets.infomaniakTintColor
-        inputController.textInput!.textColor = Assets.textColor
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let availableTitleWidth = titleLabel.bounds.width
+        guard titleLabel.preferredMaxLayoutWidth != availableTitleWidth else { return }
+
+        titleLabel.preferredMaxLayoutWidth = availableTitleWidth
+        titleLabel.invalidateIntrinsicContentSize()
+    }
+
+    private func configure(textField: UITextField) {
+        textField.borderStyle = .none
+        textField.layer.borderColor = Assets.outlineColor.cgColor
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 8
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 1))
+        textField.leftViewMode = .always
+        textField.textColor = Assets.textColor
+        textField.tintColor = Assets.infomaniakTintColor
+        textField.delegate = self
+    }
+
+    private func setError(
+        _ errorText: String?,
+        accessibilityValue: String? = nil,
+        on textField: UITextField,
+        errorLabel: UILabel
+    ) {
+        let accessibilityError = accessibilityValue ?? errorText
+        errorLabel.text = errorText
+        errorLabel.isHidden = errorText?.isEmpty ?? true
+        textField.accessibilityHint = accessibilityError
+        if accessibilityError != nil {
+            textField.layer.borderColor = UIColor.systemRed.cgColor
+        } else {
+            textField.layer.borderColor = textField.isFirstResponder
+                ? Assets.infomaniakTintColor.cgColor
+                : Assets.outlineColor.cgColor
+        }
     }
 
     func showAlert(title: String, message: String) {
@@ -82,7 +117,7 @@ class JoinViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    @objc func infoButtonPressed(error: Bool) {
+    @objc func infoButtonPressed() {
         showAlert(title: "", message: "copyLinkExplanation".localized)
     }
 
@@ -202,15 +237,20 @@ class JoinViewController: UIViewController {
     @IBAction func joinMeetingButtonPressed(_ sender: UIButton) {
         joinMeetingButton.setLoading(true)
         if usernameTextField.text!.count < 2 {
-            usernameFieldController?.setErrorText(
+            setError(
                 "mandatoryUserName".localized,
-                errorAccessibilityValue: "mandatoryUserName".localized
+                on: usernameTextField,
+                errorLabel: usernameErrorLabel
             )
         }
 
         let roomText = roomLinkTextField.text!
-        if roomText.count < 1 {
-            roomLinkFieldController?.setErrorText("mandatoryField".localized, errorAccessibilityValue: "mandatoryField".localized)
+        if joining && roomText.isEmpty {
+            setError(
+                "mandatoryField".localized,
+                on: roomLinkTextField,
+                errorLabel: roomLinkErrorLabel
+            )
         }
 
         guard canStartMeeting() else {
@@ -233,11 +273,13 @@ class JoinViewController: UIViewController {
                         return
                     }
 
-                    self.roomLinkFieldController?.setErrorText(
-                        "",
-                        errorAccessibilityValue: "codeDoesntExistError".localized
+                    self.setError(
+                        nil,
+                        accessibilityValue: "codeDoesntExistError".localized,
+                        on: self.roomLinkTextField,
+                        errorLabel: self.roomLinkErrorLabel
                     )
-                    self.infoButton.tintColor = self.roomLinkFieldController?.errorColor
+                    self.infoButton.tintColor = .systemRed
                     self.infoButton.removeTarget(self, action: nil, for: .touchUpInside)
                     self.infoButton.addTarget(
                         self,
@@ -262,13 +304,13 @@ class JoinViewController: UIViewController {
 
     @IBAction func usenameChanged(_ sender: UITextField) {
         if usernameTextField.text!.count > 0 {
-            usernameFieldController?.setErrorText(nil, errorAccessibilityValue: nil)
+            setError(nil, on: usernameTextField, errorLabel: usernameErrorLabel)
         }
     }
 
     @IBAction func roomIdChanged(_ sender: UITextField) {
         if roomLinkTextField.text!.count > 0 {
-            roomLinkFieldController?.setErrorText(nil, errorAccessibilityValue: nil)
+            setError(nil, on: roomLinkTextField, errorLabel: roomLinkErrorLabel)
         }
 
         infoButton.tintColor = Assets.outlineColor
@@ -284,6 +326,18 @@ class JoinViewController: UIViewController {
     }
 
     // MARK: - Keyboard management
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.accessibilityHint == nil {
+            textField.layer.borderColor = Assets.infomaniakTintColor.cgColor
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.accessibilityHint == nil {
+            textField.layer.borderColor = Assets.outlineColor.cgColor
+        }
+    }
 
     @objc func keyboardWillChange(notification: Notification) {
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double

@@ -130,7 +130,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T61-Dg-5QS">
                                         <rect key="frame" x="6" y="332" width="288" height="166"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Quelle réunion souhaitez-vous rejoindre ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-LA-4bf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Quelle réunion souhaitez-vous rejoindre ?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-LA-4bf">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="textColor"/>
@@ -142,8 +142,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
                                                 <rect key="frame" x="0.0" y="56" width="288" height="52"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu" customClass="MDCTextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="22"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="Z36-c6-g5v"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -153,8 +156,17 @@
                                                             <action selector="roomIdChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="192-Kz-0Fl"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom affiché dans la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-CC-l6Q" customClass="MDCTextField">
-                                                        <rect key="frame" x="0.0" y="30" width="288" height="22"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-PM-LtR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom affiché dans la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-CC-l6Q">
+                                                        <rect key="frame" x="0.0" y="56" width="288" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="gPM-Y6-ydd"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -164,6 +176,12 @@
                                                             <action selector="usenameChanged:" destination="GJ1-26-seI" eventType="editingChanged" id="Q4s-DG-ykM"/>
                                                         </connections>
                                                     </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSM-yo-5nu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-hY-DIg">
@@ -215,9 +233,11 @@
                         <outlet property="centerConstraint" destination="L9s-iy-DU5" id="lEJ-xz-vbP"/>
                         <outlet property="contentView" destination="mQ0-o9-ELb" id="fgN-tC-qCm"/>
                         <outlet property="joinMeetingButton" destination="6Bf-hY-DIg" id="2Bb-gI-q3h"/>
+                        <outlet property="roomLinkErrorLabel" destination="zzL-PM-LtR" id="fGj-pB-qBA"/>
                         <outlet property="roomLinkTextField" destination="j5l-t3-dNu" id="sxY-TC-CwS"/>
                         <outlet property="titleLabel" destination="gAb-LA-4bf" id="u4B-h0-Ryx"/>
                         <outlet property="topConstraint" destination="0Fi-b2-3z7" id="jJt-wt-DLC"/>
+                        <outlet property="usernameErrorLabel" destination="eSM-yo-5nu" id="Mfq-nH-fCC"/>
                         <outlet property="usernameTextField" destination="dVe-CC-l6Q" id="5mu-RK-KHo"/>
                     </connections>
                 </viewController>
