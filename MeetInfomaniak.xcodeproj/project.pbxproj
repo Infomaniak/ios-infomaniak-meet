@@ -337,6 +337,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetInfomaniakAppClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = kMeet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar to schedule meetings";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access for video chat";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access for voice chat";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -348,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 2.8.0;
+				MARKETING_VERSION = 2.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -374,6 +378,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetInfomaniakAppClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = kMeet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar to schedule meetings";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access for video chat";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access for voice chat";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -385,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 2.8.0;
+				MARKETING_VERSION = 2.9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.infomaniak.meet.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
