@@ -1,0 +1,42 @@
+{
+  "originHash" : "a8476cb22eb6ada369bccccf7029c9d6ea63750fa3efae2d6197aaecc53f07c9",
+  "pins" : [
+    {
+      "identity" : "giphy-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Giphy/giphy-ios-sdk",
+      "state" : {
+        "revision" : "cdefbedc9f99d40cc64667a2bfaae67a1cf36fbb",
+        "version" : "2.2.12"
+      }
+    },
+    {
+      "identity" : "jitsi-meet-ios-sdk-releases",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jitsi/jitsi-meet-ios-sdk-releases",
+      "state" : {
+        "revision" : "006d4a54bb918741edc2fff86631b6078a548ebd",
+        "version" : "13.1.1"
+      }
+    },
+    {
+      "identity" : "libwebp-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "state" : {
+        "revision" : "2b5256c29ff4e20f2a0d5ee863b62b1a22144434",
+        "version" : "1.6.0"
+      }
+    },
+    {
+      "identity" : "webrtc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jitsi/webrtc",
+      "state" : {
+        "revision" : "3a659cecd97387a0cf079be34f82f3bb24a03e13",
+        "version" : "124.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
