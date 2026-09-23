@@ -137,8 +137,8 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="titleJoin"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
-                                                <rect key="frame" x="0.0" y="56" width="288" height="104"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="751-Pa-Jyx">
+                                                <rect key="frame" x="0.0" y="56" width="288" height="112"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code ou lien de la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-t3-dNu">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
@@ -155,13 +155,13 @@
                                                         </connections>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-PM-LtR">
-                                                        <rect key="frame" x="0.0" y="52" width="288" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="64" width="288" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom affiché dans la réunion" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-CC-l6Q">
-                                                        <rect key="frame" x="0.0" y="56" width="288" height="48"/>
+                                                        <rect key="frame" x="0.0" y="64" width="288" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="gPM-Y6-ydd"/>
                                                         </constraints>
@@ -175,7 +175,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSM-yo-5nu">
-                                                        <rect key="frame" x="0.0" y="108" width="288" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="128" width="288" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>

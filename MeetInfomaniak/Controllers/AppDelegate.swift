@@ -12,13 +12,6 @@ import UIKit
 let baseServerURL = "https://kmeet.infomaniak.com"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        window?.rootViewController?.beginAppearanceTransition(true, animated: false)
-        window?.rootViewController?.endAppearanceTransition()
-    }
-
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -36,35 +29,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         JitsiMeet.sharedInstance().defaultConferenceOptions = jitisiOptions
 
-        window?.rootViewController = UINavigationController(rootViewController: InitialViewController.instantiate())
-        window?.makeKeyAndVisible()
         return true
     }
 
     func application(
         _ application: UIApplication,
-        willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-    ) -> Bool {
-        return true
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
+        let configuration = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
+        configuration.delegateClass = SceneDelegate.self
+        return configuration
+    }
+}
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
+    private var isReturningFromBackground = false
+
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
+        guard let windowScene = scene as? UIWindowScene else { return }
+
+        window = UIWindow(windowScene: windowScene)
+        if let url = connectionOptions.urlContexts.first?.url
+            ?? connectionOptions.userActivities.compactMap(\.webpageURL).first {
+            launchFromLink(url: url)
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: InitialViewController.instantiate())
+            window?.makeKeyAndVisible()
+        }
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        launchFromLink(url: url)
-        return true
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        guard isReturningFromBackground else { return }
+        isReturningFromBackground = false
+        window?.rootViewController?.beginAppearanceTransition(true, animated: false)
+        window?.rootViewController?.endAppearanceTransition()
     }
 
-    func application(
-        _ application: UIApplication,
-        continue userActivity: NSUserActivity,
-        restorationHandler: ([UIUserActivityRestoring]?) -> Void
-    ) -> Bool {
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        isReturningFromBackground = true
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            launchFromLink(url: url)
+        }
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         if let url = userActivity.webpageURL {
             launchFromLink(url: url)
         }
-        return true
     }
 
-    func launchFromLink(url: URL) {
+    private func launchFromLink(url: URL) {
         let navigationController = UINavigationController()
         let joinViewController = JoinViewController.instantiate()
         joinViewController.joining = true

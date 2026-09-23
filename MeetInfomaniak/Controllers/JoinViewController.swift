@@ -340,25 +340,26 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc func keyboardWillChange(notification: Notification) {
-        let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
-        let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
-        let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        guard let userInfo = notification.userInfo,
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double,
+              let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
 
-        UIView.animateKeyframes(
+        let keyboardFrameInView = view.convert(keyboardFrame, from: nil)
+        let keyboardOverlap = max(0, view.safeAreaLayoutGuide.layoutFrame.maxY - keyboardFrameInView.minY)
+        let isKeyboardVisible = keyboardOverlap > 0
+
+        topConstraint.constant = 16
+        centerConstraint.isActive = !isKeyboardVisible
+        bottomConstraint.constant = isKeyboardVisible ? keyboardOverlap + 16 : 16
+
+        UIView.animate(
             withDuration: duration,
             delay: 0.0,
-            options: UIView.KeyframeAnimationOptions(rawValue: curve),
+            options: UIView.AnimationOptions(rawValue: curve << 16),
             animations: {
-                if curFrame.origin.y > targetFrame.origin.y {
-                    self.topConstraint.constant = -targetFrame.height
-                    self.centerConstraint.isActive = false
-                    self.bottomConstraint.constant = targetFrame.height
-                } else if curFrame.origin.y < targetFrame.origin.y {
-                    self.topConstraint.constant = 16
-                    self.centerConstraint.isActive = true
-                    self.bottomConstraint.constant = 16
-                }
                 self.view.layoutIfNeeded()
             },
             completion: nil
